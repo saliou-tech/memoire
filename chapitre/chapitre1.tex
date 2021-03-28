@@ -1,0 +1,67 @@
+\section{Introduction}
+
+La cryptographie est une discipline des maths incluant des principes et méthodes permettant de garantir  les services de sécurité de l’information .Sa principale mission  est de garantir la sécurité des communications c'est-à-dire de permettre à des entités qui ne se font pas confiance en général de communiquer en toute sécurité en présence de potentiels adversaires (susceptibles entre autres d'accéder à des secrets en violant la confidentialité, d'intercepter et de modifier les informations échangées ou d'usurper des identités lors d'une communication).
+\\
+La cryptographie ne prend en charge que les 4 premiers sur les 5 services de sécurité fondamentaux que sont la Confidentialité, l'intégrité, l'authentification, la Non Répudiation et la Disponibilité.Elle est composée des systèmes à clé secrète et des systèmes à clés publiques.
+\\
+ Dans un système à clés secrètes les entités se partagent la même clé pour le chiffrement et le déchiffrement (on parle de cryptographie symétrique)
+
+ \\
+ Dans le cas du système à clé publique, on utilise deux clés dont l'une soit k’ est difficile à déduire de l'autre soit k (on parle aussi de cryptographie asymétrique). La clé k est appelée clé publique et est utilisée pour le chiffrement ou la vérification de signature selon le système ; la clé k’ est appelée clé privée et est utilisée pour le déchiffrement ou la signature selon le système.
+ \\
+
+ Les algorithmes de chifffrements et les protocoles cryptographique sont impliqués dans une variété d'applications critiques:
+ : les banques en ligne, le vote électronique, la vente aux enchères électroniques... En tant que tels, leurs securités doivent donc être formellement vérifiées et prouvées
+ \section{Sécurité inconditionelle}
+ \subsection{Notion de sécurité parfaite}
+ Un cryptosytéme est parfois définis par trois algorithmes :Algorithme de génération des clés ,de chiffrement et de déchiffrement ainsi qu’une specification d’un espace de message M avec \#M > 1
+ \\
+ L’algorithme de génération des clés que nous notons GEN est un algorithme probabiliste qui produit une clé k choisit  selon une certaine distribution. Nous désignons par  K l’espace des clés c’est à dire l’ensemble de toutes les clés possibles qui peuvent être sortis par GEN
+ \\
+ L’algorithme de chiffrement que nous allons noté par ENC prend en entré une clé \kappa $ \in $ K et un messsage m $ \in $ M produit un  chiffré c .Nous considérons que l’algorithme de chiffrement est probabiliste donc ENC(k,m)peut alors générer des chiffrés différents lorsque le même message est utilisé.On note c \mapsto ENC{_\kappa}\[ \left (m\right ) \].On note C l’ensemble de tous les chiffrés possibles
+\\
+L’algorithme de déchiffrement noté par DEC prend en entré une clé $  \kappa $ et un chiffré c et produit le message initial m.
+Contrairement à ENC l’algorithme de déchiffrement est déterministe puisque DEC{_\kappa}\[ \left (c \right ) \] donne la même sortie à chaque exécution on notera donc m:=DEC{_\kappa}\[ \left (c \right ) \]  pour designer le caractére deterministe
+\\
+
+Il est évident que si l’attaquant détient la clé  alors il pourra déchiffrer tous les messages échangés par les entités. Alors qu’en est-il de ENC ? N’est-il pas mieux de garder tous les deux (l’algorithme et la clé) secret?
+\\
+Auguste Kerckhoffs  a soutenu le contraire à la fin du 19e siècle lors de l’élucidation de plusieurs principes de conception de chiffrements militaires. L'un des plus important d’entre eux, désormais simplement connu sous le nom de principe de Kerckhoff.
+\subsection{principe de Kerckhoff}
+La méthode de chiffrement ne doit pas être tenue secrète, et elle doit pouvoir tomber entre les mains de l'attaquant sans inconvénient.
+\\
+Pour pouvoir bien comprendre ce principe et voir l’importance de garder la clé secrète nous pouvons considérer l’exemple suivant
+\\
+Soit m un message $\in$  $\{ 0,1 \}^n$ . On definit notre algorithme de chiffrement (ENC) en faisant la somme directe entre m et $\kappa$ $\in$ K
+c = m  $\oplus$ $\kappa$ .On peut voir dans cet algorithme de chiffrement que si $\kappa$ est fixé
+alors  ce cryptosystéme ne sera pas sur  et l'attaquant obtenir le massage initial à partir du chiffré en faisant m = c  $\oplus$ $\kappa$.
+\\
+Par contre si $\kappa$ est choisit de façon uniformément aléatoire   dans l’espace des clés $\{ 0,1 \}^n$ et gardé secret   pour l’attaquant alors le résultat du chiffré sera uniformément distribué dans l’espace des chiffrés $\{ 0,1 \}^n$  et la sécurité  sera atteinte
+\subsection{Principe de Shannon}
+Un chiffré doit apporter de la confusion et de la diffusion, c’est-à-dire :\\
+
+Confusion \\
+Il n’y a pas de relation algébrique simple entre le clair et le chiffré. En particulier, connaître un certain nombre de couples clair-chiffré ne permet pas d’interpoler la fonction de chiffrement pour les autres messages.\\
+Diffusion\\
+La modification d’une lettre du clair doit modifier l’ensemble du chiffré. On ne peut pas casser le chiffre morceau par morceau.
+\subsection{Théoréme du secret parfait }
+Avant d’énoncer ce théoréme,nous allons considérer les deux exemples ci-dessous \\
+\subsubsection{exemple 1}
+Considérons l’exemple simple du chiffrement de césar suivant\\
+Soit $\kappa$ $\in$  $\{0,…….25\}$ avec Pr$\left[ K= \kappa \right]$     la probabilité que la clé soit k $\left$  (on considère  que les clés sont équiprobable)$ \right)$  donc Pr$\left[ K= \kappa \right]$= $\frac{1}{26}$ .
+Supposons que nous avons la distribution suivante sur M:Pr$\left[ M= a \right]$  = 0,7 et Pr$\left[ M=z \right]$ = 0,3.$\left$  (Pr$\left[ M= a \right]$ probabilité que le message soit a et Pr$\left[ M= z \right]$ probabilité que le message soit z  )$ \right)$.Ainsi on cherche alors la probabilité que le message chiffré soit B\\
+On peut voir qu'il n'y a deux possibilités :soit M=a et K=1 ,soit m=z et k= 2 .Par indépendance de M et K nous avons  Pr$\left[ M= a  \wedge K=1 \right]$ =Pr$\left[ M= a \right]$*Pr$\left[ K= 1 \right]$,de même Pr$\left[ M= z  \wedge K=2 \right]$ =Pr$\left[ M= z \right]$*Pr$\left[ K= 2 \right]$.\\Par conséquent,\\
+  Pr$\left[ C= B \right]$=  Pr$\left[ M= a  \wedge K=1 \right]$ + Pr$\left[ M= z  \wedge K=2 \right]$
+  = 0,7 $\frac{1}{26}$+0,3 $\frac{1}{26}$= $\frac{1}{26}$ donc \\Pr$\left[ C= B \right]$=$\frac{1}{26}$\\
+  Nous pouvons également calculer la probabilité conditionnelle par exemple calculer la probabilité que le chiffré B soit issu de a ,Pr$\left[ a \mid B \right]$.En utilisant le théoréme de Bayes nous obtenons :
+
+   $Pr$\left[M= a \mid C=B \right]$= \dfrac{ Pr\left[C= B \mid M=a \right].Pr\left[ M= a \right] }{ Pr\left[ C= B \right]$ }
+  \\
+Notons  que  $Pr$\left[C= B \mid M=a \right]$  = $\frac{1}{26}$ , puisque si M = a alors la seule voie C = B
+peut se produire si $ \kappa $  = 1 ce qui se produit avec une probabilité de  $\frac{1}{26}$ \\
+
+Donc   $Pr$\left[M= a \mid C=B \right]$= \dfrac{ Pr\left[C= B \mid M=a \right].Pr\left[ M= a \right] }{ Pr\left[ C= B \right]$ }=$\frac{\frac{1}{26}.O,7}{\frac{1}{26}}$
+
+$Pr$\left[M= a \mid C=B \right]$=  0,7\\
+Conclusion\\ on a Pr$\left[ M= a \right]$ = $Pr$\left[M= a \mid C=B \right]$=0,7 .\\
+Ce résultat montre que  la probabilité d’avoir une information claire ne varie pas même si on connait son chiffré

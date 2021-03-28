@@ -1,0 +1,97 @@
+\documentclass[12pt]{report}
+\usepackage{lipsum}% for dummy text
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{graphicx}
+\usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{newtxtext,newtxmath}
+\usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
+\usepackage{bm}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{dsfont}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+\usepackage{lastpage}
+\titleclass{\part}{top} % make\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{graphicx}
+\usepackage[figurename=Fig.,labelfont=bf,labelsep=period]{caption}
+\usepackage{subcaption}
+\usepackage{newtxtext,newtxmath}
+\usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
+\usepackage{bm}
+\usepackage{soul}
+\usepackage{tikz}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{dsfont}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{caption}
+\usepackage{wrapfig}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphics}
+\usepackage{lastpage}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{setspace}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[mathscr]{euscript}
+\usepackage{textcomp}
+\usepackage{setspace}
+\usepackage{lineno}
+\titleformat{\part}
+[display]
+{\centering\normalfont\Huge\bfseries}
+{\titlerule[5pt]\vspace{3pt}\titlerule[2pt]\vspace{3pt}\MakeUppercase{\partname} \thepart}
+{0pt}
+{\titlerule[2pt]\vspace{1pc}\huge\MakeUppercase}
+%
+\titlespacing*{\part}{0pt}{0pt}{20pt}
+%
+\titleclass{\chapter}{straight} % make chapter like a section (no newpage)
+\titleformat{\chapter}
+[display]
+{\centering\normalfont\Huge\bfseries}
+{\titlerule[5pt]\vspace{3pt}\titlerule[2pt]\vspace{3pt}\MakeUppercase{\chaptertitlename} \thechapter}
+{0pt}
+{\titlerule[2pt]\vspace{6pt}\huge\MakeUppercase}
+
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+\title{apprentissage automatique préservant la confidentialité basé sur le chiffrement  homomorphique}
+\author{Serigne Saliou Gueye }
+\maketitle{}
+\begin{document}
+\chapter*{R E M E R C I E M E N T S}
+Acknowledgement goes here
+\chapter*{Resumé}
+\chapter*{Intoduction générale}
+\chapter*{Abstract}
+\tableofcontents
+
+\part{Contexte et introduction}
+\chapter{Notion Préliminaires de la cryptographie}
+Avant de passer à la définition du chiffrement homomorphe, nous allons revenir sur quelques notions cryptographiques à savoir les différents systèmes cryptographique (systèmes à clés secrètes et à clés privés) et aussi parler de la sécurité prouvée en cryptographie. Pour des traitements beaucoup plus approfondis de ces concepts nous renvoyons le lecteur sur [références](Jonathan Katz and Yehuda Lindell. Introduction to Modern Cryptography (Chapman &
+Hall/Crc Cryptography and Network Security Series). Chapman & Hall/CRC, 2007.)
+\input{chapitre/chapitre1.tex}
+
+
+
+
+\end{document}
