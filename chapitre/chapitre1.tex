@@ -64,4 +64,212 @@ Donc   $Pr$\left[M= a \mid C=B \right]$= \dfrac{ Pr\left[C= B \mid M=a \right].P
 
 $Pr$\left[M= a \mid C=B \right]$=  0,7\\
 Conclusion\\ on a Pr$\left[ M= a \right]$ = $Pr$\left[M= a \mid C=B \right]$=0,7 .\\
-Ce résultat montre que  la probabilité d’avoir une information claire ne varie pas même si on connait son chiffré
+Ce résultat montre que  la probabilité d’avoir une information claire sur le claire a ne varie pas même si on connait son chiffré
+B
+\subsubsection{exemple 2}
+Considérez à nouveau le chiffre de décalage, mais avec la distribution suivante sur M:\\
+
+Pr$\left[ M= kim \right]$=0,5,      Pr$\left[ M= ann \right]$=0,2,         Pr$\left[ M= boo \right]$=0,3\\
+Calculons alors la probabilité pour que le chiffré C soit égale à DQQ.La seule façon dont ce  chiffré peut
+se produire est si M = ann et K = 3, ou M = boo et K = 2, ce qui arrive avec la
+probabilité 0,2 · $\frac{1}{26}$ + 0,3 · $\frac{1}{26}$ = $\frac{1}{52}$.\\
+Nous pouvons également calculer la probabilité que le chifré DQQ soit isuu de ann.? Un calcul comme ci-dessus en utilisant le théorème de Bayes
+donne $Pr$\left[M= ann \mid C=DQQ \right]$ = 0,4\\
+conclusion \\
+On a   Pr$\left[ M= ann \right]$ &\neq $Pr$\left[M= ann \mid C=DQQ \right]$ dans cette exemple nous avons vu avec cette distribution  que la probabilité d’avoir une information claire  ann varie si son  chiffré DQQ est connu
+\subsubsection{Commentaire}
+Nous pouvons maintenant definir la notion de secret parfait .On imagine un adversaire qui connaît la distribution de probabilité de M
+c’est-à-dire que l'adversaire connaît la probabilité que différents messages soient envoyés.\\
+L'adversaire connaît également le schéma de chiffrement utilisé. La seule chose
+Inconnue de l'adversaire est la clé partagée par les parties. Un message est
+choisi par l'une des parties et chiffré, et le texte chiffré résultant est transmis à l'autre partie. L'adversaire peut espionner la communication des parties, et ainsi observer ce texte chiffré. (Autrement dit, c'est un
+Attaque de texte chiffré uniquement « ciphertext-only attack », où l'attaquant ne voit qu'un seul texte chiffré.)\\
+Dans un  schéma parfaitement secret, l'observation de ce texte chiffré ne devrait avoir aucun effet sur la connaissance de l'adversaire concernant le message réel qui a été envoyé; autrement dit, la probabilité a posteriori qu'un message m $\in$ M ait été envoyé,conditionné par le texte chiffré qui a été observé, ne devrait pas être différente de
+la probabilité a priori que m serait envoyé. Cela signifie que le texte chiffré ne révèle rien sur le message envoyé sous-jacent et que l’adversaire n’apprend absolument rien sur le texte en clair qui a été chiffré. Formellement
+\subsubsection{Definition 1}
+Un cryptosystéme (GEN,ENC,DEC) avec M l’espace de messages est parfaitement secret si pour toute distribution de probabilité sur M et $\forall$ m $\in$ M et c $\in$ C telque Pr[C=c]>0 on a ;
+\begin{center}
+  $Pr$\left[M= m \mid C=c \right]$=   $Pr$\left[M= m \right]$.
+\end{center}\\
+(L'exigence que Pr [C = c]> 0 est une condition nécessaire pour éviter le
+Conditionnement sur un événement à probabilité nulle.)
+\\
+Nous pouvons voir que le chiffrement de césar n’est pas parfaitement secret
+
+\subsubsection{Théorème du secret parfait, Shannon }
+Soit (M,K,C, GEN,ENC,DEC) un cryptosytéme .On suppose que \#M =\#K =\#C <$\infty$ et que Pr[M=m]>0 $\forall$ m $\in$ M .
+Alors ce cryptosytéme est à secert parfait Si seulement si
+
+ $\bigcdot$ La distribution des clés suit une loi uniforme \\
+
+ $\bigcdot$ pour tout clair m appartient à M\\
+\begin{center}
+  \[ \phi{_m} =
+  \begin{cases}
+  K$\longrightarrow$C\\
+  $\kappa$$\longrightarrow$ENC{_\kappa}\[ \left (m\right ) \]
+  \end{cases}
+\]
+\end{center}
+
+
+est une bijection
+\subsubsection{Démonstration}
+On suppose avoir secret parfait. On montre d’abord la bijectivité, puis l’équiprobabilité.
+Bijectivité\\
+S’il existe m tel que \phi_m:k\mapsto $ENC{_\kappa}\[ \left (m\right ) \]  est non surjective, il existe c $\in$ C tel que $\forall$ \kappa $\in$ K, $ENC{_\kappa}\[ \left (m\right ) \]\neq c$. En particulier Pr$\left[C= c \mid M=m \right]$=0, d’où l’on tire Pr$\left[M=m  \mid C=c \right]$=0\neq\Pr$\left[M=m \right]$>0 impossible. Donc $ \phi_m$  est surjective, et par égalité des cardinaux bijective.
+\\
+Equiprobabilité\\
+Soit c $\in$ C un chiffré fixé. Pour tout m $\in$ M, on note $\kappa$(m) l’unique clef telle que $ENC{_$ \kappa(m)$  }[m]=c (d’après la bijectivité). On a Pr$\left[M=m  \mid C=c \right]$ = Pr$\left[K=$\kappa$(m) ]\right]$
+
+Puisque par hypothèse Pr$\left[M=m  \mid C=c \right]$=Pr$\left[M=m \right]$, on obtient Pr$\left[K=$\kappa$(m) ]\right]$=Pr$\left[C=c \right]$.Or le chiffrement m\mapsto $ENC{_\kappa}\[ \left (m\right ) \]  est injectif à clef fixé, donc bijectif. Donc pour toute clef $\kappa$, il existe m tel que $\kappa$=$\kappa$(m).
+
+Ainsi, Pr$\left[K=$\kappa$ ]\right]$ = Pr$\left[K=$\kappa$(m) ]\right]$ = Pr$\left[C=c ]\right]$est constante, et vaut  $\frac{1}{\#K}$
+
+Dans le sens réciproque, il suffit d’effectuer le calcul : par équiprobabilité des clefs
+\section{définition de sécurité pour la cryptographie à clé privée}
+Avant de parler de la sécurité, nous allons définir formellement ce que signifie être  sùr  pou un  système cryptographique .La sécurité d’un cryptosysteme est évaluée du fait qu’un adversaire efficace  peut ou non différencier ou distinguer le chiffré de deux textes clairs  dans une preuve par jeux donnée .
+\subsubsection{Fonction négligeable }
+
+  Une fonction F de $\mathbf{N} & \longrightarrow &\mathbf{R}$ est dite negligeable  si pout tout polynome P il existe n{_0} $\in$ N telque pour tout n> n{_0}$  on a:
+  \begin{center}
+    F(n)<$\frac{1}{ P\left(n\right) } $
+
+  \end{center}
+  Dans ce qui suit le terme on utilisera le terme  « securité eav» pour  désigner  la sécurité  du preuve par jeu en présence d’un espion comme noté dans la [référence]
+
+  \subsection{sécurité EAV }
+  \subsubsection{indistinguabilité}
+  On considère une expérience noté PrivK^{eav}$  dans lequel un adversaire A émet deux messages m{_0},m{_1}$  et recoit le chiffré d’un de ces messages .La définition de l’indistinguabilité stipule qu’un schèma E est sûr  si aucun adversaire A  ne peut déterminer lequel des deux messages a été chiffre on dit alors que le cryptosysteme est indistinguable
+  \subsubsection{Définition de l'expérience}
+  L’expérience est définie pour un schéma de chiffrement à clé privée E = (GEN, ENC, DEC), un adversaire A, et une valeur n pour le paramètre de sécurité :\\
+  1 ) L'adversaire A émet deux messages m{_0}, m{_1} $\in$ M
+  \\
+  \\
+  2)Une clé $\kappa$ est générée à l’aide de l’algorithme GEN, inconnue de l’adversaire de plus un bit aléatoire b  $\in$
+   $\{0,1\}$ est choisi pour sélectionner m{_0}, m{_1} $ . On calcule  c=$ENC{_\kappa}\[ \left (m{_b}\right ) \] et on donne le chiffré c à   A comme challenge
+   \\
+   \\
+   3)A émet alors un bit b ‘ dans le but d’avoir b’=b
+   \\
+   \\
+   4 ) Le résultat de l’expérience est 1 si b’=b et 0 sinon .Dans le cas ou le résultat est 1  on dit que A a réussi et on note  PrivK^{eav}{_A,_E}$  =1\\
+Ainsi formellement nous pouvons definir la « securité EAV » comme suit\\
+\subsubsection{Définition 2}
+Un schéma de chiffrement à clé privée E= (GEN, ENC, DEC) est indistinguable sous une attaque eav(attaque en présence d'espion) si pour tout algorithme probaliste ,il existe une fonction negligeable negl  telle que
+\begin{center}
+   Pr$\left[PrivK^{eav}{_A,_E}$(n) =1  ]\right]$ $\leq$ $\frac{1}{2}$  + negl(n)
+\end{center}
+Où la probabilité est prise aléatoirement  et l’expérience également (c'est-à-dire
+le choix de la clé, du bit b ainsi que tout paramètre utilisé par ENC).
+\subsection{Attaque par texte choisi (Choosen plaintext Attack CPA)}
+Formellement, nous modélisons les attaques par texte choisi en donnant à l'adversaire A l'accès à un oracle de chiffrement, vu comme une boîte noire" qui chiffre les messages choisis par A à l'aide d'une clé k inconnue de lui.
+Autrement dit, nous imaginons que A a accès à un "oracle" ENC{_$\kappa$}(-) ; lorsque A
+interroge cet oracle en lui fournissant un message m comme entrée, l'oracle
+renvoie un texte chiffré c ← ENC{_$\kappa$}(m) comme réponse. (Si ENC est randomisé, l'oracle
+oracle utilise un nouvel aléa chaque fois qu'il répond à une requête). L'adversaire
+peut interagir avec l'oracle de chiffrement de manière adaptative, autant de fois qu'il le souhaite.\\
+\\
+Considérons l'expérience suivante définie pour tout schéma de chiffrement E =
+(GENC, ENC, DEC), l'adversaire A, et la valeur n pour le paramètre de sécurité :
+\\
+\\
+1.) Une clé k est générée en utilisant GEN. L'adversaire A, qui ne connaît pas la clé, est autorisé à effectuer un nombre polynomial de requêtes à un oracle de chiffrement ENC{_$\kappa$}.
+\\
+\\
+2.)A émet deux messages m{_0}, m{_1}$ $ $\in$ M
+\\
+\\
+3.) On choisit un bit aléatoire b $\in$  $\{0,1\}$. On calcule c = ENC{_$\kappa$}(m{_b}$) et on donne  le chiffré c à A comme le challenge
+\\
+4.) A continue à avoir accès à l'oracle de chiffrement ENC{_$\kappa$}.
+\\
+\\
+5.) A sort un bit b' dans le but d'avoir b'= b
+\\
+\\
+6.) La sortie de l'expérience est 1 si b'= b et 0 sinon. Nous appelons le premier cas le succès de A et le désignons par
+PrivK^{cpa}{_A,_E}$  =1\\.
+\subsubsection{Définition 3}
+Un schéma de chiffrement à clé privée E = (GEN, ENC, DEC) est sûr en cas d'attaque par texte plat choisi
+(CPA) si, pour tous les adversaires probabilistes en temps polynomial A, il existe une fonction négligeable negl
+telle que
+\begin{center}
+  Pr$\left[PrivK^{cpa}{_A,_E}$(n) =1  ]\right]$ $\leq$ $\frac{1}{2}$  + negl(n)
+
+\end{center}
+\subsubsection{proposition 1}
+Un schéma de chiffrement E dont l’algorithme de chiffrement ENC  est déterministe ne peut pas être CPA-sûr
+\subsubsection{Démonstration}
+Considérons l'adversaire A suivant qui joue le jeu de sécurité CPA comme suit :\\
+1.) Sélectionner  deux messages aléatoires distincts m{_0}, m{_1}$  $\in$ M.\\
+2.) Utiliser l'oracle de chiffrement pour obtenir les chiffrés c{_0} = ENC{_$\kappa$}(m{_0}$) et c{_1} = ENC{_$\kappa$}(m{_1}$).\\
+3.) Sortir les deux messages m{_1}, m{_1}$  $\in$ M\\
+4.) A la réception du texte chiffré c, si c = c{_0}$ , sortir le bit 0, sinon sortir le bit 1.\\
+Comme ENC est déterministe, le texte chiffré du challenge  c, étant un chiffrement de m{_0}$  ou m{_1}$ , sera égal à c{_0}$   ou c{_1} $ . Ainsi, A pourra réussir avec une probabilité non négligeable sur $\frac{1}{2}$ (en particulier,A réussira toujours). Ainsi, E ne peut pas être CPA-sûr
+\subsection{Attaque à chiffré choisi (Choosen Cipher text Attack)(CCA)}
+Qu’est-ce que cela signifie pour un schéma de chiffrement de résister contre les attaques à chiffre choisi ?
+Comme d’habitude pour définir  une notion de sécurité appropriée, nous devons définir deux choses : la capacité supposé de l’attaquant et ce qui constitue une attaque réussie .Pour ce dernier nous suivrons l’approche adoptée dans les définitions précédentes .Nous allons   donc donner à l’attaquant un texte chiffré c comme challenge issu des messages m{_0}$  ou m{_1}$ (chacun choisi avec une probabilité égale )et on considère que le schéma est cassé si l’attaquant peut déterminer lequel des deux messages a été chiffre avec une probabilité significative meilleur que ½
+\\
+\\
+L’attaque par chiffré choisi (CCA) permet à l’adversaire de disposer à la fois d’un oracle de chiffrement et de déchiffrement qu’il peut interroger à tout moment pendant le jeu.\\
+D’autres textes distinguent les attaques par chiffré choisi non adaptative  et les attaques par chiffres choisis adaptative .Les premières également appelé  lunchtime permettent seulement à l’adversaire d’utiliser l’oracle de déchiffrement  avant de recevoir le challenge (le chiffré) .La seconde un modèle d’attaque beaucoup  plus puissant  permet à l’adversaire de continuer d’utiliser l’oracle de déchiffrement après avoir reçu le challenge ,mais évidemment il n’est pas autorisé à  interroger l’oracle de déchiffrement avec le challenge .
+Dans ce mémoire nous faisons allusion à la seconde cas lorsque nous parlerons d’attaque CCA
+Comme nous pouvons le voir la sécurité CCA est beaucoup plus forte que la sécurité CPA ou EAV et les implique tous les deux. Nous présenterons les définitions formelles ci-dessous\\
+\\
+Considérons l'expérience suivante définie pour tout schéma de chiffrement E =
+(GENC, ENC, DEC), l'adversaire A, et la valeur n pour le paramètre de sécurité :\\
+\\
+1)Une clé est généré à l’aide de l’algorithme de génération  des clés GEN.L’adversaire A qui ne connait pas la clé ,peut effectuer un nombre polynomiale de requête à un oracle de chiffrement et de  déchiffrement \\
+\\
+2)A emet deux meaages m{_0}$  , m{_1}$
+\\
+\\
+3)On choisit un bit aléatoire  b $\in$  $\{0,1\}$. On calcule c = ENC{_$\kappa$}(m{_b}$)et on donne c à A comme challenge \\
+\\
+4)A continué à avoir accès à l’oracle de chiffrement et de déchiffrement  mais avec la restriction que A ne peut pas exécuter l’oracle de déchiffrement sur le challenge c\\
+\\
+5)A produit un bit b’ dans le but d’avoir b’=b\\
+\\
+6)Le resultat de l’experience est  1 si b’=b et 0 sinon
+Si b= b’ nous disons que A a réussi et nous le désignons par PrivK^{cca}{_A,_E}$  =1\\.
+\subsubsection{Définition 3}
+Un schéma de chiffrement à clé privée E = (KeyGen, Enc, Dec) est ,(CCA)  sûr si, pour tous les adversaires probabilistes en temps polynomial A, il existe une fonction négligeable negl telle que
+\begin{center}
+  Pr$\left[PrivK^{cca}{_A,_E}$(n) =1  ]\right]$ $\leq$ $\frac{1}{2}$  + negl(n)
+
+\end{center}
+\section{Cryptographie à clé publique }
+\subsection{Fonction à sens unique }
+
+Une fonction f : A $ \longrightarrow$ B est dite à sens unique s'il est facile
+à calculer f(x) pour tout x ∈ A (complexité polynômiale)et est difficile (complexité
+exponentielle) pour presque tout y $\in$ B, de trouver x tel que y = f(x).\\
+\\
+Une fonction est à sens unique avec trappe si l'on connaît un secret permettant de
+l'inverser
+\subsection{Fonction de hashage }
+$\{ 0,1 \}^*$ ensemble des chaines de longueur quelconque, $\{ 0,1 \}^l$ ensemble des chaines longueur
+fixe avec l$\neq$0.
+\subsubsection{définition 3}
+
+Une fonction H $\{ 0,1 \}^*$−→ $\{ 0,1 \}^l$ est dite fonction de hachage si :\\
+1. Pour tout x, H(x) est facile à calculer, H(x) est appelé le hash ou l'empreinte de
+x\\
+2. Étant donné H(x), il est difficile de trouver y tel que y = H(x) (fonction à sens
+unique) ;\\
+3. Étant donné x, il est difficile de trouver x'tel que x $\neq$ x'et H(x) = H(x'), (collusions faibles) ;\\
+4. Il est difficile de trouver x et x' (de son choix) x$\neq$= x'tel que H(x) = H(x'), (collusions
+fortes) ;
+\subsection{Modélisation du chiffrement à clés publique}
+Un shéma de chiffrement à clé publique  de E=(GEN,ENC,DEC) avec un espace de clés $\mathcal{K}$= $\mathcal{K}${_k_s}$ $ $\times$ $\mathcal{K}${_k_p}$,un espace de message $\mathcal{M}$ et un espace  chiffré $\mathcal{C}$ est un 3-tuple d'algorithme efficace dans lequel :\\
+GEN : $\lambda$ $\longrightarrow$$\mathcal{K}$ algorithme de génération des clés\\
+ENC{_$\kappa$} : $\mathcal{M}$ $\longrightarrow$$\mathcal{C}$ est une fonction à sens unique (avec trappe qui est un inverse à gauche) appelée fonction de chiffrement et qui dépend d'un paramètre $\kappa$ appelé clé(publique)\\
+DEC{_$\kappa$'} : $\mathcal{C}$ $\longrightarrow$$\mathcal{M}$ est la trappe  et est appelée fonction de déchiffrement (dépendant de la clé $\kappa$')  et on a DEC{_$\kappa$'}(ENC{_$\kappa$}(m)) = m
+\\
+\\
+Il existe des définitions identiques  pour la sécurité EAV, CPA et CCA pour les systèmes de chiffrements à clé publique. Nous renvoyons  le lecteur à [référence] pour les détails.
+\subsubsection{proposition 2}
+Un cryptosystéme à clé publique est EAV-sùr si et seulement il est Cpa-sùr
+\subsubsection{Démonstration}
+Dans la version à clé publique du jeu de sécurité EAV, l'adversaire A a accès à la clé publique pk. Par conséquent, A peut calculer Enc{_p_k}$\left(m\right)$  lui-même pour tout message m, ce qui est équivalent à donner à A l'accès à un oracle de chiffrement. Par conséquent, pour les schémas de chiffrement à clé publique, la sécurité EAV est équivalente à la sécurité CPA.

@@ -56,6 +56,12 @@
 \usepackage{textcomp}
 \usepackage{setspace}
 \usepackage{lineno}
+\usepackage{graphicx}
+\usepackage{eucal}
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
 \titleformat{\part}
 [display]
 {\centering\normalfont\Huge\bfseries}
