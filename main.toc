@@ -1,33 +1,107 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \contentsline {part}{I\hspace {1em}Contexte et introduction}{3}{part.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Notion Préliminaires de la cryptographie}{3}{chapter.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Sécurité inconditionelle}{4}{section.1.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.1}Notion de sécurité parfaite}{4}{subsection.1.2.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.2}principe de Kerckhoff}{5}{subsection.1.2.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.3}Principe de Shannon}{5}{subsection.1.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.4}Théoréme du secret parfait }{5}{subsection.1.2.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{exemple 1}{6}{subsubsection*.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{exemple 2}{6}{subsubsection*.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Commentaire}{7}{subsubsection*.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Definition 1}{7}{subsubsection*.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Théorème du secret parfait, Shannon }{8}{subsubsection*.5}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Démonstration}{8}{subsubsection*.6}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}définition de sécurité pour la cryptographie à clé privée}{9}{section.1.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Fonction négligeable }{9}{subsubsection*.7}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.1}sécurité EAV }{9}{subsection.1.3.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{indistinguabilité}{9}{subsubsection*.8}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Définition de l'expérience}{9}{subsubsection*.9}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Définition 2}{10}{subsubsection*.10}%
-\contentsline {subsection}{\numberline {1.3.2}Attaque par texte choisi (Choosen plaintext Attack CPA)}{10}{subsection.1.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.2}Attaque par texte clair choisi (Choosen plaintext Attack CPA)}{10}{subsection.1.3.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Définition 3}{11}{subsubsection*.11}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{proposition 1}{11}{subsubsection*.12}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Démonstration}{11}{subsubsection*.13}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.3}Attaque à chiffré choisi (Choosen Cipher text Attack)(CCA)}{11}{subsection.1.3.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Définition 3}{13}{subsubsection*.14}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Cryptographie à clé publique }{13}{section.1.4}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.1}Fonction à sens unique }{13}{subsection.1.4.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.2}Fonction de hashage }{13}{subsection.1.4.2}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{définition 3}{13}{subsubsection*.15}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.4.3}Modélisation du chiffrement à clés publique}{14}{subsection.1.4.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{proposition 2}{14}{subsubsection*.16}%
+\defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Démonstration}{14}{subsubsection*.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Le chiffrement homomorphe}{15}{chapter.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction}{15}{section.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2} Concept du chiffrement homomorphe}{15}{section.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}Modélisation du chiffrement homomorphe}{15}{subsection.2.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Définition}{15}{subsubsection*.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Definition 2}{17}{subsubsection*.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{définition 3}{17}{subsubsection*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Théoréme }{17}{subsubsection*.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Démonstration}{18}{subsubsection*.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Sécurité des cryptosytémes homomorphe}{18}{section.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}La Malléabilité}{18}{subsection.2.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Définition 3}{18}{subsubsection*.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{proposition 1}{19}{subsubsection*.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Démonstration}{19}{subsubsection*.25}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Notion Préliminaires de machine learning}{20}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduction}{20}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Classification binaire}{21}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Classification naïve bayésienne}{24}{section.3.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Regression linéaire}{25}{section.3.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Annalyse des composantes principales (ACP)}{26}{section.3.5}%

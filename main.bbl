@@ -1,0 +1,245 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{6}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0806a8d3af66cb2d03bca30d96e86907}{%
+           family={CRAMER†},
+           familyi={C\bibinitperiod},
+           given={RONALD},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ac89683e43aa2c9d7210a80b06818683}{%
+           family={SHOUP‡},
+           familyi={S\bibinitperiod},
+           given={VICTOR},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \strng{fullhash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \strng{bibnamehash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \strng{authorbibnamehash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \strng{authornamehash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \strng{authorfullhash}{4ad3d25b0980715079e73f80ea1ee0db}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{DESIGN AND ANALYSIS OF PRACTICAL PUBLIC-KEY ENCRYPTION SCHEMES SECURE AGAINST ADAPTIVE CHOSEN CIPHERTEXT ATTACK∗}
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+    \endentry
+    \entry{8}{article}{}
+      \name{author}{2}{}{%
+        {{hash=926269a097c38456f5b32d7efb1d1a80}{%
+           family={Domingos},
+           familyi={D\bibinitperiod},
+           given={Pedro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=79d7ca91adbd768ad280ba49b7e0719d}{%
+           family={Pazzani},
+           familyi={P\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f47910570a89ff717e7e1f194ff7d092}
+      \strng{fullhash}{f47910570a89ff717e7e1f194ff7d092}
+      \strng{bibnamehash}{f47910570a89ff717e7e1f194ff7d092}
+      \strng{authorbibnamehash}{f47910570a89ff717e7e1f194ff7d092}
+      \strng{authornamehash}{f47910570a89ff717e7e1f194ff7d092}
+      \strng{authorfullhash}{f47910570a89ff717e7e1f194ff7d092}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the Optimality of the Simple Bayesian Classifier under Zero-One Loss}
+      \verb{urlraw}
+      \verb http://engr.case.edu/ray_soumya/mlrg/optimality_of_nb.pdf
+      \endverb
+      \verb{url}
+      \verb http://engr.case.edu/ray_soumya/mlrg/optimality_of_nb.pdf
+      \endverb
+    \endentry
+    \entry{3}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bd007b2a3d698c39bd758b253f7c2ebf}{%
+           family={Gentry},
+           familyi={G\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{fullhash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{bibnamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authorbibnamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authornamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authorfullhash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computing Arbitrary Functions of Encrypted Data}
+      \field{year}{March 2010,}
+      \verb{urlraw}
+      \verb https://cacm.acm.org/magazines/2010/3/76272-computing-arbitrary-functions-of-encrypted-data/fulltext?mobile=false
+      \endverb
+      \verb{url}
+      \verb https://cacm.acm.org/magazines/2010/3/76272-computing-arbitrary-functions-of-encrypted-data/fulltext?mobile=false
+      \endverb
+    \endentry
+    \entry{1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b808467086eb88324d0bfa6255d37051}{%
+           family={Jonathan\bibnamedelima Katz},
+           familyi={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Yehuda\bibnamedelima Lindell},
+           giveni={Y\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Chapman}%
+        {Hall CRC}%
+      }
+      \strng{namehash}{b808467086eb88324d0bfa6255d37051}
+      \strng{fullhash}{b808467086eb88324d0bfa6255d37051}
+      \strng{bibnamehash}{b808467086eb88324d0bfa6255d37051}
+      \strng{authorbibnamehash}{b808467086eb88324d0bfa6255d37051}
+      \strng{authornamehash}{b808467086eb88324d0bfa6255d37051}
+      \strng{authorfullhash}{b808467086eb88324d0bfa6255d37051}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Modern Cryptography Principles and Protocols}
+      \field{year}{2007}
+    \endentry
+    \entry{7}{article}{}
+      \name{author}{1}{}{%
+        {{hash=87536bbeb99c754f64c4b98c86ef2637}{%
+           family={M.BISHOP},
+           familyi={M\bibinitperiod},
+           given={CHRISTOPHER},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{87536bbeb99c754f64c4b98c86ef2637}
+      \strng{fullhash}{87536bbeb99c754f64c4b98c86ef2637}
+      \strng{bibnamehash}{87536bbeb99c754f64c4b98c86ef2637}
+      \strng{authorbibnamehash}{87536bbeb99c754f64c4b98c86ef2637}
+      \strng{authornamehash}{87536bbeb99c754f64c4b98c86ef2637}
+      \strng{authorfullhash}{87536bbeb99c754f64c4b98c86ef2637}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PATTERN RECOGNITION AND MACHINE LEARNING}
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+    \endentry
+    \entry{4}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1c38fa3906c4976a3d64f4395d3dc05a}{%
+           family={Rothblum},
+           familyi={R\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \strng{fullhash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \strng{bibnamehash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \strng{authorbibnamehash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \strng{authornamehash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \strng{authorfullhash}{1c38fa3906c4976a3d64f4395d3dc05a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Homomorphic Encryption:from Private-Key to Public-Key}
+      \verb{urlraw}
+      \verb https://www.iacr.org/archive/tcc2011/65970216/65970216.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.iacr.org/archive/tcc2011/65970216/65970216.pdf
+      \endverb
+    \endentry
+    \entry{2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=df73e2e0a6569a6a55139daa87082d51}{%
+           family={SOW},
+           familyi={S\bibinitperiod},
+           given={Djiby},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{df73e2e0a6569a6a55139daa87082d51}
+      \strng{fullhash}{df73e2e0a6569a6a55139daa87082d51}
+      \strng{bibnamehash}{df73e2e0a6569a6a55139daa87082d51}
+      \strng{authorbibnamehash}{df73e2e0a6569a6a55139daa87082d51}
+      \strng{authornamehash}{df73e2e0a6569a6a55139daa87082d51}
+      \strng{authorfullhash}{df73e2e0a6569a6a55139daa87082d51}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{"Introduction à la Sécurité Prouvée en Cryptographie à Clés publique}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://nitaj.users.lmno.cnrs.fr/cimpamaure/cours_securite-prouvee-crypto_Djiby_SOW-CIMPA.pdf
+      \endverb
+      \verb{url}
+      \verb https://nitaj.users.lmno.cnrs.fr/cimpamaure/cours_securite-prouvee-crypto_Djiby_SOW-CIMPA.pdf
+      \endverb
+    \endentry
+    \entry{5}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4ffcd7ee039a2e18408c5968931cdd39}{%
+           family={Vadhan‡},
+           familyi={V\bibinitperiod},
+           given={Kai-Min\bibnamedelimb Chung\bibnamedelimb -Yael\bibnamedelimb Kalai\bibnamedelimb -\bibnamedelima Salil},
+           giveni={K\bibinithyphendelim M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \strng{fullhash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \strng{bibnamehash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \strng{authorbibnamehash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \strng{authornamehash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \strng{authorfullhash}{4ffcd7ee039a2e18408c5968931cdd39}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Improved Delegation of Computation using Fully Homomorphic Encryption}
+      \field{year}{April 28, 2010}
+      \verb{urlraw}
+      \verb https://people.seas.harvard.edu/~salil/research/delegation-eprint-apr10.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.seas.harvard.edu/~salil/research/delegation-eprint-apr10.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

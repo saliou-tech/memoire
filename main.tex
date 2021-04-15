@@ -15,7 +15,6 @@
 \usepackage{cancel}
 \usepackage{dsfont}
 \usepackage{framed}
-\usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{wrapfig}
@@ -47,7 +46,6 @@
 \usepackage{fancyhdr}
 \usepackage{graphics}
 \usepackage{lastpage}
-\usepackage{mathptmx}
 \usepackage{multirow}
 \usepackage{setspace}
 \usepackage{algorithm}
@@ -57,7 +55,11 @@
 \usepackage{setspace}
 \usepackage{lineno}
 \usepackage{graphicx}
+\graphicspath{{images/}}
 \usepackage{eucal}
+\usepackage{biblatex}
+\addbibresource{references.bib}
+\usepackage[style=authoryear,sorting=ynt]{biblatex}
 \makeatletter
 \newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
@@ -93,11 +95,24 @@ Acknowledgement goes here
 
 \part{Contexte et introduction}
 \chapter{Notion Préliminaires de la cryptographie}
-Avant de passer à la définition du chiffrement homomorphe, nous allons revenir sur quelques notions cryptographiques à savoir les différents systèmes cryptographique (systèmes à clés secrètes et à clés privés) et aussi parler de la sécurité prouvée en cryptographie. Pour des traitements beaucoup plus approfondis de ces concepts nous renvoyons le lecteur sur [références](Jonathan Katz and Yehuda Lindell. Introduction to Modern Cryptography (Chapman &
-Hall/Crc Cryptography and Network Security Series). Chapman & Hall/CRC, 2007.)
+Avant de passer à la définition du chiffrement homomorphe, nous allons revenir sur quelques notions cryptographiques à savoir les différents systèmes cryptographique (systèmes à clés secrètes et à clés privés) et aussi parler de la sécurité prouvée en cryptographie. Pour des traitements beaucoup plus approfondis de ces concepts nous renvoyons le lecteur sur \cite{1}
 \input{chapitre/chapitre1.tex}
-
-
-
-
+\chapter{Le chiffrement homomorphe}
+\section{Introduction}
+A présent que nous avons vu les notions prélimnaires de la cryptographie,nous pouvons entammer  la theorie du chiffrement homomorphe.\\
+Dans ce chapitre nous introduisons le concept du chiffrement homomorphe de maniére formelle mais aussi par analogie en utilisant  l'exemple  de la  bijouterie presenté dans \cite{3} .Ensuite nous allons parler de l'efficacité et de la sécurité du chiffrement homomorphe.\\
+\input{chapitre/chapitre2.tex}
+\\
+\\
+\chapter{Notion Préliminaires de machine learning}
+\section{Introduction}
+Dans cette section, nous allons voir quelques algorithmes de machine learning qui seront combinés  ultérieurement avec les schémas de chiffrements homomorphes.Nous allons étudier les algorithmes d'apprentissage supervisé et non supervisé.\\
+L'apprentissage supervisé consiste à déduire une fonction (modéle) à partir d'un ensemble de données  étiquetées.
+Les deux types d'apprentissage supervisé sont la classification et la régression, le premier faisant référence au cas où les étiquettes forment un ensemble discret d'étiquettes de classe, et le second lorsque les étiquettes prennent des valeurs continues.Pour la classification , nous examinerons l' analyse discriminante linéaire ,  la classification naïve bayésienne et les arbres de décision.\\D'autre part, l'apprentissage non supervisé consiste à déduire la structure cachée des données non étiquetées.Pour le cas de l'apprentissage non supervisé ,nous allons voir l'nalyse en composantes principales,qui est également un outil important pour la réduction de la dimension\\
+\input{chapitre/chapitre3.tex}
+\\
+\\
+\\
+\\
+\printbibliography
 \end{document}

@@ -136,7 +136,7 @@ Avant de parler de la sécurité, nous allons définir formellement ce que signi
     F(n)<$\frac{1}{ P\left(n\right) } $
 
   \end{center}
-  Dans ce qui suit le terme on utilisera le terme  « securité eav» pour  désigner  la sécurité  du preuve par jeu en présence d’un espion comme noté dans la [référence]
+  Dans ce qui suit le terme on utilisera le terme  « securité eav» pour  désigner  la sécurité  du preuve par jeu en présence d’un espion comme noté dans la \cite{1}
 
   \subsection{sécurité EAV }
   \subsubsection{indistinguabilité}
@@ -162,7 +162,7 @@ Un schéma de chiffrement à clé privée E= (GEN, ENC, DEC) est indistinguable 
 \end{center}
 Où la probabilité est prise aléatoirement  et l’expérience également (c'est-à-dire
 le choix de la clé, du bit b ainsi que tout paramètre utilisé par ENC).
-\subsection{Attaque par texte choisi (Choosen plaintext Attack CPA)}
+\subsection{Attaque par texte clair choisi (Choosen plaintext Attack CPA)}
 Formellement, nous modélisons les attaques par texte choisi en donnant à l'adversaire A l'accès à un oracle de chiffrement, vu comme une boîte noire" qui chiffre les messages choisis par A à l'aide d'une clé k inconnue de lui.
 Autrement dit, nous imaginons que A a accès à un "oracle" ENC{_$\kappa$}(-) ; lorsque A
 interroge cet oracle en lui fournissant un message m comme entrée, l'oracle
@@ -268,7 +268,7 @@ ENC{_$\kappa$} : $\mathcal{M}$ $\longrightarrow$$\mathcal{C}$ est une fonction �
 DEC{_$\kappa$'} : $\mathcal{C}$ $\longrightarrow$$\mathcal{M}$ est la trappe  et est appelée fonction de déchiffrement (dépendant de la clé $\kappa$')  et on a DEC{_$\kappa$'}(ENC{_$\kappa$}(m)) = m
 \\
 \\
-Il existe des définitions identiques  pour la sécurité EAV, CPA et CCA pour les systèmes de chiffrements à clé publique. Nous renvoyons  le lecteur à [référence] pour les détails.
+Il existe des définitions identiques  pour la sécurité EAV, CPA et CCA pour les systèmes de chiffrements à clé publique. Nous renvoyons  le lecteur à \cite{2} pour les détails.
 \subsubsection{proposition 2}
 Un cryptosystéme à clé publique est EAV-sùr si et seulement il est Cpa-sùr
 \subsubsection{Démonstration}

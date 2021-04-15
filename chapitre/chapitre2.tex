@@ -1,0 +1,77 @@
+\section{ Concept du chiffrement homomorphe}
+\subsection{Modélisation du chiffrement homomorphe}
+\subsubsection{Définition}
+Un cryptosytéme homomorphe $\varepsilon$  = (GEN,ENC,DEC,Evaluate ,F) avec $\mathcal{K}$ espace des clés ,$\mathcal{M}$ espace des  textes clairs $\mathcal{C}$ espace espace des textes  chiffrés  et $\lambda$ la paramétre de sécurité est un 5 uplet dont:\\
+GEN : $\lambda$ $\longrightarrow$$\mathcal{K}$ est l' algorithme de génération des clés\\
+ENC : $\mathcal{K}$ $\times$  $\mathcal{M}$ $\longrightarrow$$\mathcal{C}$ est l' algorithme de chiffrement\\
+DEC : $\mathcal{K}$ $\times$  $\mathcal{C}$ $\longrightarrow$$\mathcal{M}$ l'algorithme de dechiffrement \\
+Evaluate :  $\mathcal{F}$ $\times$ $\mathcal{C}^*$ $\longrightarrow$$\mathcal{C}$ est la fonction d'evaluation qui prend en entré une fonction autorisée f $\in$  $\mathcal{F}$ et l'évalue sur un ensemble de texte chiffré ($ $c{_1} $,$ $c{_2} $,......,$ $c{_n} $) pour produire un autre chiffré c .\\
+\\
+
+La definition ci ci-dessus stipule que si f represente une fonction de traitement alors on peut faire  du traitement (evaluer) sur les données sans en avoir accés .Cela peut sembler paradoxal ou voir impossible ,mais pour ce faire une  idéé de la solution  ,on peut considérer l'exemple suivant présenté dans l'étude de Gentry de 2010 \cite{3}.\\
+Dans cette exemple Alice posséde une bijouterie.Elle prend des matiéres premieres dans son magasin (or, diamant ..)et les transforme en coliers et bagues. Alice doit s'occuper de la commande  des ses clients et elle est donc obligé à laisser à ses employeurs faire la transformation.Cependant Alice ne fait pas confiance à ses employeurs et elle craint qu'ils ne volent certaines matiéres premiéres à son insu.\\
+La solution d'Alice à cette énigme est la suivante .Elle crée une boîte en laquelle elle seule a accés grace à une clé .La boite est accompagnée de gants qui permettent de manipuler  les objets qui s'y trouvent mais ne permettent pas de sortir quoi que soit de la boite .Ensuite Alice met les matiéres premieres dans la boîte et la ferme  avec sa clé pourque son contenu ne puisse pas etre retiré et demande à ses employés d'assembler les bijoux en utilisant les gants fournis par la boîte.\\
+Ainsi Alice utilise sa clé pour ouvrir la boîte et récupérer les bijoux assemblés.\\
+\\
+Comme le note Gentry ,cette analogie présente en effet des insuffisances ,même  si les employeurs ne peuvent pas sortir les materiaux ,ils peuvent voir s'ils sont présent ou non et mieux ce que la boite contient,ce qui ne correspond pas aux exigeances de sécurité de la cryptographie.cependant l'exemple démontre suffisamment l'ideé prinicpale du chiffrement homomorphe.
+\\
+Une autre analogie, plus réaliste, est la suivante : supposons que la scolarité du département de LACGAA de l'UCAD  conserve des dossiers détaillés sur tous ses étudiants et leurs résultats.Ainsi la scolarité décide de  stocker tout ces données chiffrés évidement sur un service cloud .Ainsi les administrateurs de la scolarité veulent calculer à partir des données stockés sur le cloud la moyenne de chaque étudiants .Cependant ils ne veulent pas comprommettre les données personnelles des étudiants en donnant au service tier (le cloud) la clé secréte .\\
+Dans ce cas si les administrateurs utilisent le chiffrement homomorphe où la moyennne sera une fonction autorisée( $\mu$ $ \in$ F),le service tie (cloud ) pourrra evaluer alors la moyenne des etudiants sur les donées chiffrés et le renvoyer à son tour aux administrateurs de la scolarité qui pouront alors utilisés leur clé secréte pour déchiffrer la moyenne chiffrée des étudiants .
+\\
+Notez que nous supposons que le service en cloud  suit un modèle honnête mais curieux, ce qui signifie qu'il exécutera les instructions correctement (c'est-à-dire qu'il calculera la fonction de chiffrement souhaitée au lieu d'une fonction malveillante de son choix), mais s'il en a l'occasion, il essaiera  d'obtenir des informations sur les données sous-jacentes chiffrés qu'il stocke.
+\\
+Cependant, il existe un cryptosytéme homomorphe trivial qui satisfait à notre définition du chiffrement homomorphe, où la fonction Evaluate ajoute simplement la description de la fonction aux chiffrés corresponds,et l'algorithme DEC se charge de l'evalution de la fonction on  a alors:
+\begin{center}
+  Evaluate(f, $c{_1}$, ..., $c{_n}$) = (f, $c{_1}$, ..., $c{_n}$) = c \\ L'algorithme DEC fait l'evaluation
+  DEC(c) = f(DEC($c{_1}$), ..., DEC($c{_n}$))
+\end{center}
+\subsubsection{Definition 2}
+Un schéma de chiffrement est dit compacte  si le temps d'exécution du déchiffrement du  chiffré évalué c (sortie de Evaluate) est égale au temps d'execution  du dechiffrement des chiffrés par lesquels il est crée  $c{_i}$ (entrée de Evaluate)
+La taille c ne peut pas etre plus grande que la taiile des  $c{_i}$  et le temps de déchiffrement de c doit etre indépendant de la complexité de f, la fonction permise choisie.
+\\
+\\
+
+\subsubsection{définition 3}
+Un schéma de chiffrement homomorphe est dit à i-saut (i-hop homomorphe) s'il est possible d'appliquer le résultat de l'algorithme  d'évaluaion i fois de suite.
+\\
+\\
+Une propriété intéressante que nous donne la compacité est que nous pouvons transformer un schéma de chiffrement homomorphe à clé privée en un schéma homomorphe à clé publique en particulier nous avons ce théorème suivant tiré de\cite{4}
+\subsubsection{Théoréme }
+Tout schéma de chiffrement à clé privée sécurisé à messages multiples qui est compact et homomorphe par rapport à l'addition modulo 2 peut être transformé en un schéma à clé publique sémantiquement sûr. \\En particulier, si le schéma à clé privée permet i + 1 évaluations de la fonction d'évaluation homomorphique((i+1)-hop homorphe)
+alors le schéma à clé publique correspondant permet i évaluations de la fonction d'évaluation homomorphique(i-hop homomorphe)
+\subsubsection{Démonstration}
+Voir \cite{4} pour deux constructions explicites qui transforment de tels schémas de chiffrement à clé privée en schémas à clé publique.
+\section{Sécurité des cryptosytémes homomorphe}
+Par rapport à la sécurité des schémas de chiffrement  homorphes , il est important  de réfléchir su le modéle d'attaque du serveur tier (l'evaluateur) et voir  ce qu'il est capable de faire .Dans l'exemple précédent nous avons supposé que le modéle est honnête mais curieux ce qui signifie que la partie tierce (serveur ) suivra et exécutera les instructions correctementet essaiera d'en apprendre le plus possible sur les données chiffrés.\\
+Notez qu'il y a d'autres modèles  beaucoup plus adverses que nous pouvons considérer pour le serveur (par exemple, il ne calcule pas toujours la fonction appropriée), mais ces obstacles présentés  peuvent être résolus en utilisant la délégation de calcul.cette derniére permet d'établir un protocole pour qu'un tiers calcule une fonction et prouve efficacement qu'il a correctement calculé la fonction .Nous allons pas dans ce mémoire traiter la délégation des chiffrements homorphe nous renvoyons le lecteur aux sources commme \cite{5}
+\\
+Une caractéristique des cryptosytémes homomorphes qui a des implications importantes pour la sécurité est la
+malléabilité.
+\subsection{La Malléabilité}
+\subsubsection{Définition 3}
+Un schéma de chiffrement E est malléable si, étant donné le texte chiffré d'un message, c = $ENC{_\kappa}\[ \left (m\right ) \],
+il existe une fonction non constante f qui n'est pas la fonction d'identité, de sorte qu'un adversaire efficace A peut
+calculer le texte chiffré d'un certain message lié  c' tel que $DEC{_\kappa}\[ \left (c'\right ) \] = f(m) avec une probabilité non négligeable.
+\\
+\\
+Les cryptosytémes homomorphes sont malléables par définition  puisqu'ils permettent l'évaluation de diverses fonctions sur des chifffrés.Les cryptosytémes malléables sont intrinsèquement limités dans la sécurité qu'ils offrent.Les chercheurs ont montré que plus que le système est malléable, plus qu' il est facile à casser.Comme les cryptosystéme homorphes sont malléables , nous avons donc  la limitation suivante sur leur sécurité
+\subsubsection{proposition 1}
+
+Tout schéma de chiffrement malléable ne peut pas être sécurisé contre les attaques adaptatives par chifré choisi(CCA).
+\subsubsection{Démonstration}
+Soit E=(GEN,ENC,DEC,F,Evaluate) un cryptosystéme homorphe malléable où pour un certain message m{_0}$ ,et pout tout c $\in $
+\begin{center}
+  C{_m}$ =
+  $\{ c$\in$ C | Pr$\left[ ENC{_\kappa}\[ \left (m{_0} \right ) =c\  \right]  avec $\kappa$ et ENC aléatoire\}$
+\end{center}
+Comme E est malléable alors le message f(m) a un chiffré de la forme g(c)  pour tout c $\in$ C{_m}$  où f, g peuvent être calculés en temps polynomial.Comme f est non constante, il existe un message m{_1}$  tel que f(m{_1}$ ) $\neq$ f(m{_0}$ ). Alors, on considère l'adversaire l'adversaire A suivant :\\
+1.) Soumet m{_0}$  à l'oracle de chiffrement, et note c{_0}$  = ENC{$\kappa$}(m{_0}$ )\\
+2.) Sort les messages f(m{_0}$ ) et f(m{_1}$ )\\
+3.) A la réception du texte chiffré de défi c, A calcule g(c{_0}$ ). Si c = g(c{_0}$ ), alors la sortie b = 0. Sinon, tirer à pile ou face et sortir le résultat.
+Nous pouvons voir qu'un tel adversaire obtiendrait un avantage non négligeable, et donc notre schéma de chiffrement
+malléable E n'est pas sûr contre les attaques adaptatives par texte choisi.
+\\\\
+À partir de là, nous nous rendons compte que, bien qu'il existe des schémas de chiffrement, même à clé publique, qui sont sûrs contre les attaques par texte chiffré choisi adaptatif \cite{6}, il est impossible de construire un schéma de chiffrement homomorphe qui satisfasse à cette exigence de sécurité. Cela dit, bien que les schémas de chiffrement  homomorphes ne puissent pas
+formellement répondre à l'exigence de la CCA, nous pouvons les augmenter avec des méthodes de délégation de calcul qui peuvent aider à garantir que le serveur ne modifie pas de manière malveillante les chiffrés qu'il renvoie, ce qui est le type d'attaque qui motive le désir d'une sécurité CCA \cite{5}. Il existe également de nombreuses d'autres normes de sécurité que les schémas de chiffrement homomorphes sont capables d'atteindre, comme la sécurité EAV et la sécurité CPA \cite{1}.\\
+\\
+ Les définitions de sécurité d'un chiffrement homomorphique sont les mêmes que celles d'un schéma de chiffrement simple. Pour un schéma de chiffrement régulier, imposant des conditions sur les opérations GEN, ENC, DEC, mais étant indépendantes de l'opération Evaluate.
