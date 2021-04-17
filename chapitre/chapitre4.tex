@@ -1,0 +1,42 @@
+\section{cryptosystéme simplement homomorphe de RSA }
+L'algorithme RSA conçu par Rivest, Shamir et Adleman en 1978 est largement utilisé aujourd'hui pour transmettre en toute sécurité de petites clés secrètes entre les deux parties, qui peuvent ensuite être utilisées pour communiquer en toute sécurité  avec des messages beaucoup  plus importants grâce à des systèmes de chiffrement à clé privée efficaces.(chiffrement hybride)\\
+Nous allons explorer les propriétés homomorphes que le RSA possède, même s'il n'a pas été spécifiquement conçu dans ce but. Tout d'abord, nous définissons formellement le RSA ci-dessous :\\
+\begin{algorithm}[H]
+$
+\Procedure{GEN}{$(1^{\lambda}) }
+  \State On Choisit 2 nombres premiers  aléatoires p, q, et on  calcule N = pq
+  \State On calcule $\phi{(N)}$=$(p-1)(q-1)$
+  \State On choisit e >1 tel que pgcd(\phi{(N)}$ ,e)=1   et on calcule  d= e^{-1}mod \ \phi{(N)}$
+ \State \textbf{return} $(N,e,d)$
+\EndProcedure
+
+\Procedure{ENC}{$(m,N,e)$}
+ \State \textbf{return} $c= m^{e}mod \ d$
+\EndProcedure
+
+\Procedure{DEC}{$(c,N,d)$}
+ \State \textbf{return} $m= c^{d}mod \ N$
+\EndProcedure
+
+
+
+ \caption{Algorithme de RSA \cite{1}}
+\end{algorithm}
+\\
+Nous pouvons facilement voir que les schémas de chiffrement  et de déchiffrement de  RSA sont corrects puisque on a :
+\begin{align*}
+  DEC{_(}{_N,}{_d}{_)}(ENC{_(}{_N,}{_e}{_)})(m)&=  DEC{_(}{_N,}{_d}{_)}(m^{e} mod \ N)\\
+                                               &=m^{de} mod \ N \\
+                                               &=m \ mod \ N
+\end{align}
+De plus, notez que l'algorithhme  RSA prend pour acquis que nous pouvons générer des nombres premiers de $\lambda$-bit  pour tout $\lambda$ $\in$ $ \mathbf{Z}^{+}$ . Ce n'est certainement pas une hypothèse triviale, mais de nombreux schémas simples qui génèrent des nombres de $\lambda$-bit aléatoires et utilisent des tests de primalité comme le test de Miller-Rabin fonctionnent bien en pratique \cite{1}. Une discussion plus approfondie des méthodes permettant de générer des nombres premiers  de  $\lambda$-bit dépasse le cadre de ce mémoire , nous supposerons donc que nous pouvons générer efficacement de tels nombres premiers.
+\\
+Dans ce qui , nous montrerons que RSA est un schéma de chiffrement homomorphe valide qui supporte la multiplication
+modulo N.
+\subsubsection{Proposition}h
+ RSA  est un schema  de chiffrement valide et partiellement homomorphe. En particulier, la multiplication des messages chiffrés modulo N correspond à la multiplication des messages clairs modulo N.
+ \subsubsection{Démonstration}
+ Soit $ENC{_(}{_N,}{_e}{_)}$ l'algorithme de chiffrement et $m{_1}$ et $m{_2}$ $\in$ $ \mathbf{Z}_{N}$  deux messages,alors on :
+ \begin{align*}
+   (ENC{_(}{_N,}{_e}{_)})(m{_1}) (ENC{_(}{_N,}{_e}{_)})(m{_2})
+ \end{align*}

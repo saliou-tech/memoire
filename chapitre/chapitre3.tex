@@ -89,8 +89,8 @@ Si nous avons K classes possibles, alors le modèle se compose de  classe de pro
 Avec ce modèle, la classification fonctionne alors en utilisant une règle de décision à posteriori maximale. Étant donné un point de données x, nous calculons la probabilité postérieure de son appartenance à chaque classe c{_i}$  et classons x dans la classe ayant la probabilité postérieure la plus élevée. Plus précisément, nous calculons.
 \begin{equation}
 \begin{split}
-c^{*}=\DeclareMathOperator{\argmax}{arg\,max}_{i\in {1,....k}}P(C=c{_i} \midX=x)\\
-=\DeclareMathOperator{\argmax}{arg\,max}_{i\in {1,....k}}\frac{P(X=x \mid C=c{_i})P(C=c{_i})}{P(X=x)}\\
+
+c^{*}=\DeclareMathOperator{\argmax}{arg\,max}_{i\in {1,....k}}P(C=c{_i} \mid X=x)=\DeclareMathOperator{\argmax}{arg\,max}_{i\in {1,....k}}\frac{P(X=x \mid C=c{_i})P(C=c{_i})}{P(X=x)}\\
 =\DeclareMathOperator{\argmax}{arg\,max}_{i\in {1,....k}}P(X=x \mid C=c{_i}) P(C=c{_i})
 
 \end{split}
@@ -117,4 +117,17 @@ LE $\frac{1}{2}$ est pris par commodité lorsque nous prenons la dérivéé . Si
   \beta^*=(X^\intercal X)^{-1}X^\intercal y
 \end{equation}
 \section{Annalyse des composantes principales (ACP)}
-Un problème courant dans l'apprentissage automatique est la malédiction de la dimensionnalité.Il s'agit du phénomène selon lequel le volume d'un espace caractéristique augmente de manière exponentielle avec le nombre de dimensions.
+Un problème courant dans l'apprentissage automatique est la malédiction de la dimensionnalité.Il s'agit du phénomène selon lequel le volume d'un espace caractéristique augmente de manière exponentielle avec le nombre de dimensions(ex $\{0,1 \}^d $ a 2^d$  éléments).Par conséquent, de nombreux algorithmes de machine learning ne sont pas adaptés aux grandes dimensions. Une façon de résoudre ce problème consiste à réduire la dimensionnalité des données tout en préservant leur structure essentielle. Pour être plus précis, si nous voulons réduire la dimension à la taille L, nous voulons un ensemble de L vecteurs W
+de telle sorte que nous minimisions l'erreur de reconstruction, définie comme suit
+\begin{equation}
+  J(W,Z)=\frac{1}{N}\sum_{i=1}^N\|  x{_i}- \widetilde{x}_{i} \|^2
+\end{equation}
+où  $\widetilde{x}_{i}$ =Vz{_i}$ avec la contrainte que V soit orthonormé.Intuituivement V est une matrice de taille D$\times$ L qui renvoie $ z{_i}$ ,représentation de faible dimension  à la représentation de dimension D , z{_i}$  est la représentation de faible dimension de x{_i}$  calculée par Z = V^\intercal$ X.\\
+Le théorème suivant nous donne la solution optimale qui minimise l'erreur de reconstruction entre x et $\widetilde{x}_{i}  $
+\subsection{théoréme (Eckart & Young,1936)}
+L'unique solution de $min_{J,v}$(Z,v) avec  $J(Z,v)$= \|  X- vZ \|^2,\|  v \|$ =1 est donné par $Z^{*}= v^{*}^\intercal X$ où v^{*}$ est le vecteur propre normalisé associé à la plus grande valeur propre $\lambda $ de XX^\intercal$.de plus on a  $ \|  Z^{*} \|^2 = $ \sqrt{\lambda}$
+\subsubsection{preuve}
+Voir \cite{9} pour la démonstration\\
+
+
+Ainsi, nous voyons que le problème de la réduction de la dimensionnalité via l'ACP peut être résolu en obtenant les vecteurs propres de la matrice de covariance empirique normalisée ayant les plus grandes valeurs propres absolues. En particulier, notre représentation à faible (L) dimension d'un vecteur de données x est donnée par $ y = V{_L}x$ (où y a une dimension L). Le vecteur propre ayant la i-ème plus grande valeur propre absolue est appelé la i-ème composante principale.

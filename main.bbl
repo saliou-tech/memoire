@@ -19,6 +19,40 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{10}{book}{}
+      \name{author}{2}{}{%
+        {{hash=816e2f157809620b6b2ed2aa074b32bf}{%
+           family={Craig\bibnamedelima Gentry},
+           familyi={C\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Amit\bibnamedelima Sahai},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=86b19cae38747f83bc6146f03e291e49}{%
+           family={Waters.},
+           familyi={W\bibinitperiod},
+           given={Brent},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cryptology ePrint Archive, Report 2013/340, 2013}%
+      }
+      \strng{namehash}{f2d7681646eca537a8c0572b32e51e7b}
+      \strng{fullhash}{f2d7681646eca537a8c0572b32e51e7b}
+      \strng{bibnamehash}{f2d7681646eca537a8c0572b32e51e7b}
+      \strng{authorbibnamehash}{f2d7681646eca537a8c0572b32e51e7b}
+      \strng{authornamehash}{f2d7681646eca537a8c0572b32e51e7b}
+      \strng{authorfullhash}{f2d7681646eca537a8c0572b32e51e7b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Homomorphic encryption from learning with errors: Conceptually-simpler, asymptotically-faster, attribute-based.}
+      \verb{urlraw}
+      \verb https://www.iacr.org/archive/crypto2013/80420297/80420297.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.iacr.org/archive/crypto2013/80420297/80420297.pdf
+      \endverb
+    \endentry
     \entry{6}{article}{}
       \name{author}{2}{}{%
         {{hash=0806a8d3af66cb2d03bca30d96e86907}{%
@@ -157,6 +191,32 @@
       \endverb
       \verb{url}
       \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+    \endentry
+    \entry{9}{book}{}
+      \name{author}{1}{}{%
+        {{hash=99413be56c82adf72b6474dcdf8d3023}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Kevin\bibnamedelima P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{fullhash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{bibnamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authorbibnamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authornamehash}{99413be56c82adf72b6474dcdf8d3023}
+      \strng{authorfullhash}{99413be56c82adf72b6474dcdf8d3023}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine Learning: A Probabilistic Perspective}
+      \verb{urlraw}
+      \verb http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf
+      \endverb
+      \verb{url}
+      \verb http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf
       \endverb
     \endentry
     \entry{4}{article}{}

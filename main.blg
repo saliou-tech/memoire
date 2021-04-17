@@ -1,18 +1,19 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'main.blg'
-[236] biber-MSWIN64:340> INFO - === 
-[308] Biber.pm:415> INFO - Reading 'main.bcf'
-[531] Biber.pm:952> INFO - Found 8 citekeys in bib section 0
-[560] Biber.pm:4340> INFO - Processing section 0
-[582] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[730] bibtex.pm:1689> INFO - LaTeX decoding ...
-[785] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[870] Utils.pm:395> WARN - legacy year field 'March 2010,' in entry '3' is not an integer - this will probably not sort properly.
-[879] Utils.pm:395> WARN - legacy year field 'April 28, 2010' in entry '5' is not an integer - this will probably not sort properly.
-[921] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[921] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[921] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[921] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[942] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[947] bbl.pm:757> INFO - Output to main.bbl
-[948] Biber.pm:128> INFO - WARNINGS: 2
+[1] Config.pm:314> INFO - Logfile is 'main.blg'
+[268] biber-MSWIN64:340> INFO - === 
+[372] Biber.pm:415> INFO - Reading 'main.bcf'
+[680] Biber.pm:952> INFO - Found 10 citekeys in bib section 0
+[738] Biber.pm:4340> INFO - Processing section 0
+[778] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[946] bibtex.pm:1689> INFO - LaTeX decoding ...
+[992] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[1063] Utils.pm:395> WARN - legacy year field 'March 2010,' in entry '3' is not an integer - this will probably not sort properly.
+[1080] Utils.pm:395> WARN - legacy year field 'April 28, 2010' in entry '5' is not an integer - this will probably not sort properly.
+[1133] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[1185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1185] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1185] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[1227] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1238] bbl.pm:757> INFO - Output to main.bbl
+[1239] Biber.pm:128> INFO - WARNINGS: 3
