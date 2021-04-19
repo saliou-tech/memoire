@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.9)  17 APR 2021 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.9)  19 APR 2021 02:14
 entering extended mode
 **./main.tex
 (main.tex
@@ -1729,10 +1729,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 24.88pt on input line 89.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 24.88pt on input line 89.
-
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+ (main.toc)
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
@@ -5593,7 +5590,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images//1.PNG, id=265, 657.95813pt x 253.69781pt>
+<images//1.PNG, id=273, 657.95813pt x 253.69781pt>
 File: images//1.PNG Graphic file (type png)
 <use images//1.PNG>
 Package pdftex.def Info: images//1.PNG  used on input line 8.
@@ -7796,84 +7793,706 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[27])
+[27] [28]
+chapitre/chapitre4.tex:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 ...ce de clés $\mathcal{K}$= $\mathcal{K}${_
+                                                  p_k}$ $ $\times$ $\mathcal...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-main.tex:122: LaTeX Error: There's no line here to end.
+chapitre/chapitre4.tex:52: Double subscript.
+l.52 ... de clés $\mathcal{K}$= $\mathcal{K}${_p_
+                                                  k}$ $ $\times$ $\mathcal{K...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+chapitre/chapitre4.tex:52: Extra }, or forgotten $.
+l.52 ...e clés $\mathcal{K}$= $\mathcal{K}${_p_k}
+                                                  $ $ $\times$ $\mathcal{K}$...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 ...athcal{K}$= $\mathcal{K}${_p_k}$ $ $\times
+                                                  $ $\mathcal{K}${_s_k}$ où...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 ...hcal{K}${_p_k}$ $ $\times$ $\mathcal{K}${_
+                                                  s_k}$ où $\mathcal{K}${_p...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:52: Double subscript.
+l.52 ...al{K}${_p_k}$ $ $\times$ $\mathcal{K}${_s_
+                                                  k}$ où $\mathcal{K}${_p_k...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+chapitre/chapitre4.tex:52: Extra }, or forgotten $.
+l.52 ...{K}${_p_k}$ $ $\times$ $\mathcal{K}${_s_k}
+                                                  $ où $\mathcal{K}${_p_k}$...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:52: Missing $ inserted.
+<inserted text> 
+                $
+l.52 ...$ $\mathcal{K}${_s_k}$ où $\mathcal{K}${_
+                                                  p_k}$=$\mathbb{Z}_{N}$ et ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:52: Double subscript.
+l.52 ...$\mathcal{K}${_s_k}$ où $\mathcal{K}${_p_
+                                                  k}$=$\mathbb{Z}_{N}$ et l'...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+chapitre/chapitre4.tex:52: Extra }, or forgotten $.
+l.52 ...mathcal{K}${_s_k}$ où $\mathcal{K}${_p_k}
+                                                  $=$\mathbb{Z}_{N}$ et l' e...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:54: Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@1 
+l.54   \Procedure
+                 {GEN}{$(1^\lambda)$}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+chapitre/chapitre4.tex:54: Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.54   \Procedure
+                 {GEN}{$(1^\lambda)$}
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+chapitre/chapitre4.tex:54: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 \\
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+l.54   \Procedure
+                 {GEN}{$(1^\lambda)$}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-main.tex:123: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.123 \\
-        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 10000) detected at line 54
+[][]
+ []
 
 
-main.tex:124: LaTeX Error: There's no line here to end.
+chapitre/chapitre4.tex:55: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 \printbibliography
-                        
+l.55   \State
+              On Choisit 2 nombres premiers aléatoires p, q, de $\lambda$-bit
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 55
+[][]
+ []
+
+
+chapitre/chapitre4.tex:56: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56   \State
+              On calcule N=pq et $\phi{(N)}$=$(p-1)(q-1)$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 56
+[][]
+ []
+
+
+chapitre/chapitre4.tex:58: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58    \State
+               \textbf{return} (N,$\phi{(N)} $)
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 58
+[][]
+ []
+
+
+chapitre/chapitre4.tex:59: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59   \EndProcedure
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 59
+[][]
+ []
+
+chapitre/chapitre4.tex:60: Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@1 
+l.60 \Procedure
+               {ENC}{$(m,N)$}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+chapitre/chapitre4.tex:60: Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.60 \Procedure
+               {ENC}{$(m,N)$}
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+chapitre/chapitre4.tex:60: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 \Procedure
+               {ENC}{$(m,N)$}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 60
+[][]
+ []
+
+
+chapitre/chapitre4.tex:61: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61   \State
+              r $\leftarrow $  $\mathbb{Z}_{N^*}$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 61
+[][]
+ []
+
+
+chapitre/chapitre4.tex:62: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62   \State
+              $c=(1+N)^m.r^n(mod \ N^2)$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 62
+[][]
+ []
+
+
+chapitre/chapitre4.tex:63: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63  \State
+             \textbf{return} $c$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 63
+[][]
+ []
+
+
+chapitre/chapitre4.tex:64: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 \EndProcedure
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 64
+[][]
+ []
+
+chapitre/chapitre4.tex:66: Missing \endcsname inserted.
+<to be read again> 
+                   \ALG@currentblock@1 
+l.66 \Procedure
+               {DEC}{$(c,N,\phi{(N)})$}
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+chapitre/chapitre4.tex:66: Extra \endcsname.
+\ALG@makebeginrepeat ...\ALG@thisblock \endcsname 
+                                                  \relax \def \ALG@thisblock...
+l.66 \Procedure
+               {DEC}{$(c,N,\phi{(N)})$}
+I'm ignoring this, since I wasn't doing a \csname.
+
+
+chapitre/chapitre4.tex:66: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 \Procedure
+               {DEC}{$(c,N,\phi{(N)})$}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 66
+[][]
+ []
+
+
+chapitre/chapitre4.tex:67: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 \State
+            Calculer  $ \widetilde{c} = c^{\phi{(N)}} mod \ N^2 $
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 67
+[][]
+ []
+
+
+chapitre/chapitre4.tex:68: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 \State
+            Calculer $\widetilde{m}=\frac{\widetilde{c}-1}{N}$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][]
+ []
+
+
+chapitre/chapitre4.tex:69: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \State
+            Calculer $m=\widetilde{m}.\phi{(N^-1) mod \ N^2$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 69
+[][]
+ []
+
+chapitre/chapitre4.tex:69: Missing } inserted.
+<inserted text> 
+                }
+l.69 ...er $m=\widetilde{m}.\phi{(N^-1) mod \ N^2$
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+chapitre/chapitre4.tex:70: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70  \State
+             \textbf{return} $m$
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 70
+[][]
+ []
+
+
+chapitre/chapitre4.tex:71: LaTeX Error: Lonely \item--perhaps a missing list en
+vironment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \EndProcedure
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 71
+[][]
+ []
+
+[29]
+chapitre/chapitre4.tex:80: Misplaced alignment tab character &.
+l.80   z &
+          \equiv y^N \mod N^2 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:81: Missing $ inserted.
+<inserted text> 
+                $
+l.81 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:81: Display math should end with $$.
+<to be read again> 
+                   \par 
+l.81 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+chapitre/chapitre4.tex:82: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 \end{equation}
+                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+chapitre/chapitre4.tex:82: You can't use `\eqno' in vertical mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.82 \end{equation}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+chapitre/chapitre4.tex:82: Missing $ inserted.
+<inserted text> 
+                $
+l.82 \end{equation}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+chapitre/chapitre4.tex:82: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.82 \end{equation}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[30]
+chapitre/chapitre4.tex:107: Misplaced alignment tab character &.
+l.107 ... g^{x{_2}-x{_1}}(\frac{y_{2}}{y_{1}})^N &
+                                                  \equiv 1 \mod N^2 $. soit ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:107: Misplaced alignment tab character &.
+l.107 ...nsi $ (\frac{y_{2}}{y_{1}})^{\lambda N} &
+                                                  \equiv 1 \mod N^2 \implies...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:107: Misplaced alignment tab character &.
+l.107 ...d N^2 \implies g^{\lambda(x{_2}-x{_1})} &
+                                                  \equiv 1 \mod N^2  $.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:108: Misplaced alignment tab character &.
+l.108 ...gcd(\lambda ,N)=1 \implies  x{_2}-x{_1} &
+                                                  \equiv 0 \mod N$ donc $(\f...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:108: Misplaced alignment tab character &.
+l.108 ...0 \mod N$ donc $(\frac{y_{2}}{y_{1}})^N &
+                                                  \equiv 1 \mod N^2 $ qui ad...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+chapitre/chapitre4.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 ...}=1 $ sur $ \mathbb{Z^*}_{N^2}$.d'où x{_
+                                                  1}$- x{_2}$=0 et y{_1}$- y...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:108: Extra }, or forgotten $.
+l.108 ...1 $ sur $ \mathbb{Z^*}_{N^2}$.d'où x{_1}
+                                                  $- x{_2}$=0 et y{_1}$- y{_...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 ...r $ \mathbb{Z^*}_{N^2}$.d'où x{_1}$- x{_
+                                                  2}$=0 et y{_1}$- y{_2}$=0 ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:108: Extra }, or forgotten $.
+l.108 ...$ \mathbb{Z^*}_{N^2}$.d'où x{_1}$- x{_2}
+                                                  $=0 et y{_1}$- y{_2}$=0 et...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 ...Z^*}_{N^2}$.d'où x{_1}$- x{_2}$=0 et y{_
+                                                  1}$- y{_2}$=0 et $\epsilon...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:108: Extra }, or forgotten $.
+l.108 ...*}_{N^2}$.d'où x{_1}$- x{_2}$=0 et y{_1}
+                                                  $- y{_2}$=0 et $\epsilon_{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre4.tex:108: Missing $ inserted.
+<inserted text> 
+                $
+l.108 ...2}$.d'où x{_1}$- x{_2}$=0 et y{_1}$- y{_
+                                                  2}$=0 et $\epsilon_{g}$ es...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:108: Extra }, or forgotten $.
+l.108 ...$.d'où x{_1}$- x{_2}$=0 et y{_1}$- y{_2}
+                                                  $=0 et $\epsilon_{g}$ est ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--111
+
+ []
+
+[31]
+
+chapitre/chapitre4.tex:112: LaTeX Error: \mathbb allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 ...isément, pour un certain m $\in$ \mathbb
+                                                  {Z}_{N}  , alors$DEC_{\phi...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+chapitre/chapitre4.tex:112: Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...ment, pour un certain m $\in$ \mathbb{Z}_
+                                                  {N}  , alors$DEC_{\phi{(N)...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre4.tex:112: Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...tain m $\in$ \mathbb{Z}_{N}  , alors$DEC_
+                                                  {\phi{(N)}}(ENC_{N}(m))=m$
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[32])
+Underfull \hbox (badness 10000) in paragraph at lines 140--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--123
+
+ []
 
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-124.
+122.
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 124.
+(Font)              scaled to size 12.0pt on input line 122.
 
-Overfull \hbox (390.86055pt too wide) in paragraph at lines 125--125
+Overfull \hbox (390.86055pt too wide) in paragraph at lines 123--123
 []\T1/ntxtlf/m/n/12 Amit Sa-hai Craig Gen-try and Brent Wa-ters. |   []
  []
 
 
-main.tex:125: Package inputenc Error: Unicode character ∗ (U+2217)
+main.tex:123: Package inputenc Error: Unicode character ∗ (U+2217)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 \end
+l.123 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[28]
-Overfull \hbox (93.4528pt too wide) in paragraph at lines 125--125
+[33]
+Overfull \hbox (93.4528pt too wide) in paragraph at lines 123--123
 []\T1/ntxtlf/m/n/12 Yehuda Lin-dell Jonathan Katz. |   [].
  []
 
 
-Overfull \hbox (9.70811pt too wide) in paragraph at lines 125--125
+Overfull \hbox (9.70811pt too wide) in paragraph at lines 123--123
 []\T1/ntxtlf/m/n/12 Kevin P. Mur-phy. |   []. \T1/ntxtlf/m/sc/12 url\T1/ntxtlf/
 m/n/12 : [][]$\T1/ntxtt/m/n/12 http :
  []
 
 
-Overfull \hbox (37.56892pt too wide) in paragraph at lines 125--125
+Overfull \hbox (82.23288pt too wide) in paragraph at lines 123--123
+[]\T1/ntxtlf/m/n/12 Pascal Pail-lier. |   [].
+ []
+
+
+Overfull \hbox (37.56892pt too wide) in paragraph at lines 123--123
 []\T1/ntxtlf/m/n/12 Djiby SOW. |   [].
  []
 
@@ -7882,21 +8501,11 @@ Package caption Warning: Unused \captionsetup[sub] on input line 30.
 See the caption package documentation for explanation.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 125.
+Package lastpage Warning: Rerun to get the references right on input line 123.
 
 
 AED: lastpage setting LastPage
-[29] (main.aux
-main.aux:142: Extra }, or forgotten \endgroup.
-l.142 bal/global}
-                 
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-)
+[34] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -7904,30 +8513,35 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1A6545AB5C263D10BD074BE7CE3D520C;7100.
+(rerunfilecheck)             Checksum: 1595BD51B5879A7478E4E2834C61FD04;7561.
 
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
+Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
-(\end occurred inside a group at level 3)
+(\end occurred inside a group at level 10)
 
+### simple group (level 10) entered at line 108 ({)
+### simple group (level 9) entered at line 108 ({)
+### simple group (level 8) entered at line 108 ({)
+### simple group (level 7) entered at line 108 ({)
+### simple group (level 6) entered at line 52 ({)
+### simple group (level 5) entered at line 52 ({)
+### simple group (level 4) entered at line 52 ({)
 ### simple group (level 3) entered at line 125 ({)
 ### simple group (level 2) entered at line 125 ({)
 ### simple group (level 1) entered at line 125 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33502 strings out of 479334
- 601047 string characters out of 2857560
- 1366905 words of memory out of 3000000
- 50208 multiletter control sequences out of 15000+200000
- 502228 words of font info for 159 fonts, out of 3000000 for 9000
+ 33534 strings out of 479334
+ 601471 string characters out of 2857560
+ 1366970 words of memory out of 3000000
+ 50212 multiletter control sequences out of 15000+200000
+ 504047 words of font info for 166 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,18n,89p,761b,1744s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,18n,89p,761b,1770s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ne
 wtx/ntx-ec-tlf-pc.enc}{C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/enc/dv
 ips/newtx/ntx-ot1-tlf.enc}{C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/en
@@ -7941,12 +8555,564 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/user/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/us
 er/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txexs.pfb><C:/Users/u
 ser/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users
-/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/User
-s/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/User
-s/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (30 pages, 351974 bytes).
+/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/txsyb.pfb><C:/Us
+ers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/U
+sers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (35 pages, 374897 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 119 named destinations out of 1000 (max. 500000)
- 274 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 514 PDF objects out of 1000 (max. 8388607)
+ 138 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+an't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1            
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1             
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1              
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1               
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                 
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                  
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                   
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                    
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                     
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                      
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                       
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                        
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                         
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                          
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                            
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                             
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                              
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                               
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                 
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                  
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                   
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                    
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                     
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                      
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                       
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                        
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                         
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                          
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                            
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                             
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                              
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1                                               
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+main.aux:1: Text line contains an invalid character.
+l.1 ...                                           
+                                                                            ...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 33532 strings out of 479334
+ 601446 string characters out of 2857560
+ 1367444 words of memory out of 3000000
+ 50211 multiletter control sequences out of 15000+200000
+ 504047 words of font info for 166 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 87i,18n,89p,8221b,1770s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+main.aux:1:  ==> Fatal error occurred, no output PDF file produced!

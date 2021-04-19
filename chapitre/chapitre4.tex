@@ -33,10 +33,109 @@ De plus, notez que l'algorithhme  RSA prend pour acquis que nous pouvons génér
 \\
 Dans ce qui , nous montrerons que RSA est un schéma de chiffrement homomorphe valide qui supporte la multiplication
 modulo N.
-\subsubsection{Proposition}h
+\subsubsection{Proposition1}
  RSA  est un schema  de chiffrement valide et partiellement homomorphe. En particulier, la multiplication des messages chiffrés modulo N correspond à la multiplication des messages clairs modulo N.
  \subsubsection{Démonstration}
- Soit $ENC{_(}{_N,}{_e}{_)}$ l'algorithme de chiffrement et $m{_1}$ et $m{_2}$ $\in$ $ \mathbf{Z}_{N}$  deux messages,alors on :
+ Soit $ENC{_(}{_N,}{_e}{_)}$ l'algorithme de chiffrement et $m{_1}$ et $m{_2}$ $\in$ $ \mathbf{Z}_{N}$  deux messages,alors on a
+\begin{align*}
+  ENC{_(}{_N,}{_e}{_)}(m{_1})ENC{_(}{_N,}{_e}{_)}(m{_2})&=m{_1}^e.m{_2}^e mod \ N \\
+                                                        &=(m{_1}m{_2})^e mod \ N \\
+                                                        &=ENC{_(}{_N,}{_e}{_)}(m{_1}m{_2})
+\end{align*}
+Ainsi, on peut voir que multiplier les chifrés modulo N correspond à multiplier les messages en clair modulo N.\\
+Malheureusement, même si nous prenons l'hypothèse RSA comme acquise, il existe un certain nombre d'attaques sur le RSA  qui le rendent peu sûr \cite{1}. En fait, comme le RSA est déterministe, il ne peut pas être CPA-sùr. Cependant, nous pouvons au moins voir que l'idée d'un chiffrement homomorphe est réalisable car RSA est capable d'obtenir l'homomorphisme sans que ce soit son objectif.
+\subsection{Cryptosystème de Paillier}
+Dans cette section, nous explorons un schéma de chiffrement homomorphe additif proposé par Paillier en 1999 \cite{11}.Ce schéma utilise le problème de la classe de résidu composite, qui est étroitement lié au système RSA.Bien qu'il ne soit pas totalement homomorphe, le schéma de chiffrement de Paillier est utilisé dans de nombreuses  applications de machine learning  que nous explorons dans ce mémoire. Une caractéristique intéressante du cryptosystème de Paillier est qu'il est homomorphe sur un grand nombre de messages , c'est-à-dire sur $\mathbb{Z}_\mathbb{N}$. Un exemple courant de cas d'utilisation du cryptosystème de Paillier
+est le calcul du nombre de votes chiffrés, puisque les sommes résultantes peuvent atteindre des totaux élevés \cite{1}.Depuis sa création, le cryptosystème de Paillier a également subi des améliorations pour le rendre plus efficace .Nous décrivons l'algorithme ci-dessous (Algorithme 2), nous illustrons la réduction à RSA et nous donnons une
+preuve de sécurité, en suivant les exposés de \cite{11}, \cite{1}. En particulier, nous présentons de nombreux détails de \cite{11} mais pour la clarté de la présentation, nous utilisons la notation et la terminologie de \cite{1}.
+\subsection{Le système de chiffrement de Paillier}
+Pour le cryptosystème de Paillier, l'espace de message M = $\mathbb{Z}_{N}$ ,l'espace de clés $\mathcal{K}$= $\mathcal{K}${_p_k}$ $ $\times$ $\mathcal{K}${_s_k}$ où $\mathcal{K}${_p_k}$=$\mathbb{Z}_{N}$ et l' espace des  chiffrés $\mathcal{C}$=$\mathbb{Z}_{N^2}$
+\begin{algorithm}[H]
+  \Procedure{GEN}{$(1^\lambda)$}
+  \State On Choisit 2 nombres premiers aléatoires p, q, de $\lambda$-bit
+  \State On calcule N=pq et $\phi{(N)}$=$(p-1)(q-1)$
+
+   \State \textbf{return} (N,$\phi{(N)} $)
+  \EndProcedure
+\Procedure{ENC}{$(m,N)$}
+  \State r $\leftarrow $  $\mathbb{Z}_{N^*}$
+  \State $c=(1+N)^m.r^n(mod \ N^2)$
+ \State \textbf{return} $c$
+\EndProcedure
+
+\Procedure{DEC}{$(c,N,\phi{(N)})$}
+\State Calculer  $ \widetilde{c} = c^{\phi{(N)}} mod \ N^2 $
+\State Calculer $\widetilde{m}=\frac{\widetilde{c}-1}{N}$
+\State Calculer $m=\widetilde{m}.\phi{(N^-1) mod \ N^2$
+ \State \textbf{return} $m$
+\EndProcedure
+
+
+ \caption{Algorithme de Paillier \cite{1} ,\cite{11}}
+\end{algorithm}
+Pour démontrer l'exactitude du cryptosystème de Paillier, nous examinons l'espace du texte chiffré : le groupe$\mathbb{Z^*}_{N^2}$ sous multiplication modulo $N^2$ et introduisons la notion de  $N^{ieme}$ résidus, qui sont importants pour le cryptosystème de Paillier.
+\subsubsection{definition}
+Un entier z $\in$ $\mathbb{Z^*}_{N^2}$  est  un $N^{ieme}$ résidus modulo $N^2$ ,s'il existe y $\in$ $\mathbb{Z^*}_{N^2}$ tel que
+\begin{equation}
+  z &\equiv y^N \mod N^2 \\
+
+\end{equation}
+Pour revenir à la démonstration de  l'exactitude du cryptosytéme, nous devons prouver que le schéma de chiffrement  est univoque et que le système de déchiffrement est correct. La première est importante car si deux plaintexts sont mis en correspondance avec le même ciphertext, alors l'algorithme de déchiffrement ne pourra pas déchiffrer correctement. Donc, fixons un $N^{ieme}$ résidu g $\in$ $\mathbb{Z^*}_{N^2}$ et Notons  $\epsilon_{g}$  la fonction
+\begin{align}
+  \epsilon_{g}:\mathbb{Z}_{N} \times \mathbb{Z^*}_{N} \longrightarrow  \mathbb{Z^*}_{N^2}\\
+               (x,y) \longrightarrow  g^x.y^N (mod \ N^2)
+\end{align}
+\subsubsection{lemme}
+Si l'ordre de g $\in$ $ \mathbb{Z^*}_{N^2}$ est un miltiple non nul de N ,alors $\epsilon_{g}$ est bijective
+\subsubsection{preuve}
+Nous allons d'abord montrer que  $\mathbb{Z}_{N} \times \mathbb{Z^*}_{N}$ et $ \mathbb{Z^*}_{N^2}$ ont le meme nombre d'élements,
+ $\mathbb{Z}_{N} \times \mathbb{Z^*}_{N}$ a N $\phi{(N)}$élements avec $\phi{}$la fonction d'Euler .\\
+ Soit $N=\prod_{i}p{_i}^{e{_i}}$ la décomposition en produit de facteur premier de N.notez que
  \begin{align*}
-   (ENC{_(}{_N,}{_e}{_)})(m{_1}) (ENC{_(}{_N,}{_e}{_)})(m{_2})
+   \phi{(N)}&=\prod_{i}\phi{(p{_i}^{e{_i}})}
+                ( \phi{}  est multiplicative)
+           \\  &=\prod_{i}p{_i}^{e{_i}-1}(p{_i}-1)
  \end{align*}
+Ainsi on a,
+\begin{align*}
+  \phi{(N^2)}&=\prod_{i}\phi{(p{_i}^{2e{_i}})}\\
+             &=\prod_{i}p{_i}^{2e{_i}-1}(p{_i}-1)\\
+             &=(\prod_{i}p{_i}^{e{_i}})(\prod_{i}p{_i}^{e{_i}-1}(p{_i}-1))\\
+             &=N\phi{(N)}
+\end{align*}
+Ainsi  $\mathbb{Z}_{N} \times \mathbb{Z^*}_{N}$ et $ \mathbb{Z^*}_{N^2}$ ont le meme nombre d'élements,il suffit alors de montrer que $\epsilon_{g}$ est injective.\\\
+Supposons que $g^{x{_1}}.y_{1}^{N}=g^{x{_2}}.y_{2}^{N} (\ mod \ N^2) \implies g^{x{_2}-x{_1}}(\frac{y_{2}}{y_{1}})^N &\equiv 1 \mod N^2 $. soit $\lambda$ le plus grand entier pour lequel il existe un élément de $ \mathbb{Z^*}_{N^2}$ d'ordre $\lambda$N.Ainsi $ (\frac{y_{2}}{y_{1}})^{\lambda N} &\equiv 1 \mod N^2 \implies g^{\lambda(x{_2}-x{_1})} &\equiv 1 \mod N^2  $.
+Ceci implique que $\lambda(x{_2}-x{_1}) $ est un multiple de l'ordre de g et donc un multiple de N.Ainsi $Pgcd(\lambda ,N)=1 \implies  x{_2}-x{_1} &\equiv 0 \mod N$ donc $(\frac{y_{2}}{y_{1}})^N &\equiv 1 \mod N^2 $ qui admet une solution unique $\frac{y_{2}}{y_{1}}=1 $ sur $ \mathbb{Z^*}_{N^2}$.d'où x{_1}$- x{_2}$=0 et y{_1}$- y{_2}$=0 et $\epsilon_{g}$ est bijective\\
+\\
+Il découle alors de la bijectivité que l'algorithme de chiffrement ne fait pas correspondre deux messages distincts sur le même texte chiffré. Quant à l'exactitude de l'algorithme de déchiffrement du cryptosystème de Paillier, nous avons la proposition suivante
+\subsubsection{Proposition2}
+L'algorithme de déchiffrement du cryptosystème Paillier est correct. Plus précisément, pour un certain m $\in$ \mathbb{Z}_{N}  , alors$DEC_{\phi{(N)}}(ENC_{N}(m))=m$
+\subsubsection{démonstration}
+Observons que
+\begin{align*}
+   \widetilde{c}&=c^{\phi{(N)}} mod \ N^2 \\
+                &=(1+N)^{m\phi{(N)}}r^{n\phi{(N)}} mod \ N^2\\
+                &\leftrightarrows (m\phi{(N)mod \ N},r^{\phi{(N)}}mod \ N)            \ (bijection)\\
+                &=(m\phi{(N)mod \ N},1)                \  \ (r^{\phi{(N)}}=1 mod N ,si r et N sont premiers entre eux)\\
+                &\leftrightarrows (1+N)^{m\phi{(N)}} mod \ N^2   \ (bijection)\\
+                &=1+ m\phi{(N)}N \ mod \ N^2
+\end{align*}
+Ainsi , on obtient
+\begin{align*}
+  (\frac{\widetilde{c}-1}{N}).\phi{(N)}^{-1}=m
+\end{align*}
+Ainsi le schéma de déchiffrement est donc correcte\\
+Maintenant que nous avons vérifié l'exactitude des algorithmes de chiffrement et de déchiffrement, nous pouvons passer à l'examen de la sécurité du cryptosytéme de Paillier. Le problème difficile sur lequel le cryptosystème de Paillier est basé est le problème de résidu composite décisionnel, qui consiste à distinguer
+entre les éléments uniformes de $ \mathbb{Z^*}_{N^2}$ et les $ n^{ieme}$  residus de $ \mathbb{Z^*}_{N^2}$.Plus formellement, nous définissons ce que signifie le fait que le problème de résidu composite décisionnel soit difficile, en utilisant la définition de \cite{1}.
+\subsubsection{définition 1}
+Le problème de la résiduosité composite décisionnelle est difficile si, pour tous les algorithmes probabilistes en temps polynomial D, il existe une fonction négligeable negl telle que pour r choisi aléatoirement parmi $ \mathbb{Z^*}_{N^2}$
+\begin{align*}
+  |Pr[ D(N,r^{N} mod \ N^2)=1]-Pr[D(N,r)=1]| \leq negl(n)
+\end{align*}
+Dans la présentation originale de ce schéma par Paillier, il explore le problème de la $n^{ieme}$  classe de résidu et démontre que sa résolution nous donne un distinguateur pour le problème de résidu composite décisionnel ci-dessus. La  $n^{ieme}$  classe de résidu est définie comme suit :
+\subsubsection{définition 2}
+Soit g $\in$ $ \mathbb{Z^*}_{N^2}$ ayant un ordre non nul multiple  de N. Nous appelons la $N^{ieme}$ classe de résidu de w par rapport à g, l'unique entier $ [[w]]_{g}$ $\in$ $Z_{n}$ pour lequel il existe y tel que
+\begin{align*}
+  \epsilon_{g}([[w]]_{g},y) &=  ([[w]]_{g})^{g}.y^N =w
+\end{align*}
+Notez que ce problème est bien défini car $[[w]]_{g}$ est unique, ce qui vient du fait que $\epsilon_{g}$ est bijective (par le Lemme).

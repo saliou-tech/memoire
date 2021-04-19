@@ -1450,6 +1450,7 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Reg
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
 INPUT .\main.toc
 INPUT main.toc
+INPUT main.toc
 OUTPUT main.toc
 INPUT .\chapitre\chapitre1.tex
 INPUT chapitre\chapitre1.tex
@@ -1575,6 +1576,17 @@ INPUT chapitre\chapitre4.tex
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-sc-t1.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsym.vf
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\txsyb.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\txsya.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsym.vf
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\txsyb.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\txfonts\txsya.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxsy7.vf
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txsys.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txex-bar.tfm
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\vf\public\newtx\ntxexx.vf
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\txexs.tfm
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtt.fd
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtt.fd
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\tex\latex\newtx\t1ntxtt.fd
@@ -1605,6 +1617,8 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txexs
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txexs.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txmiaX.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txmiaX.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\txfonts\txsyb.pfb
+INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\txfonts\txsyb.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txsys.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\txsys.pfb
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\type1\public\newtx\ztmb.pfb

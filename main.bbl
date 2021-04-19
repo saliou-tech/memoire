@@ -219,6 +219,32 @@
       \verb http://noiselab.ucsd.edu/ECE228/Murphy_Machine_Learning.pdf
       \endverb
     \endentry
+    \entry{11}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c77e6f958b91a9ee6ddc9d92d55bbbbd}{%
+           family={Paillier},
+           familyi={P\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \strng{fullhash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \strng{bibnamehash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \strng{authorbibnamehash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \strng{authornamehash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \strng{authorfullhash}{c77e6f958b91a9ee6ddc9d92d55bbbbd}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Public-Key Cryptosystems Based on Composite Degree Residuosity Classes}
+      \verb{urlraw}
+      \verb https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.112.4035&rep=rep1&type=pdf
+      \endverb
+      \verb{url}
+      \verb https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.112.4035&rep=rep1&type=pdf
+      \endverb
+    \endentry
     \entry{4}{article}{}
       \name{author}{1}{}{%
         {{hash=1c38fa3906c4976a3d64f4395d3dc05a}{%
