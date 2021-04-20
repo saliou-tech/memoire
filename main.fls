@@ -1450,7 +1450,6 @@ INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Reg
 INPUT C:\Users\user\AppData\Local\Programs\MiKTeX\fonts\tfm\public\newtx\ntx-Bold-tlf-t1.tfm
 INPUT .\main.toc
 INPUT main.toc
-INPUT main.toc
 OUTPUT main.toc
 INPUT .\chapitre\chapitre1.tex
 INPUT chapitre\chapitre1.tex

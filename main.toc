@@ -120,13 +120,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Démonstration}{28}{subsubsection*.29}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Cryptosystème de Paillier}{28}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Cryptosystème de Paillier}{28}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Le système de chiffrement de Paillier}{29}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2.1}Le système de chiffrement }{29}{subsection.4.2.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{definition}{30}{subsubsection*.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{lemme}{31}{subsubsection*.31}%
+\contentsline {subsubsection}{lemme 1}{31}{subsubsection*.31}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{preuve}{31}{subsubsection*.32}%
 \defcounter {refsection}{0}\relax 
@@ -137,3 +137,33 @@
 \contentsline {subsubsection}{définition 1}{33}{subsubsection*.35}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{définition 2}{33}{subsubsection*.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Réduction en RSA}{33}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{définition 3}{33}{subsubsection*.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{lemme 2}{33}{subsubsection*.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Démonstration}{34}{subsubsection*.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{lemme 3}{34}{subsubsection*.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{démonstration}{34}{subsubsection*.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{lemme 4}{34}{subsubsection*.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{démonstration}{35}{subsubsection*.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Théoréme (Réduction en RSA)}{35}{subsubsection*.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Démonstration}{35}{subsubsection*.45}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}Preuve de sécurité}{36}{subsection.4.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{proposition 3}{36}{subsubsection*.46}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Démonstration}{36}{subsubsection*.47}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Théorème}{36}{subsubsection*.48}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{démonstration}{36}{subsubsection*.49}%

@@ -44,11 +44,11 @@ modulo N.
 \end{align*}
 Ainsi, on peut voir que multiplier les chifrés modulo N correspond à multiplier les messages en clair modulo N.\\
 Malheureusement, même si nous prenons l'hypothèse RSA comme acquise, il existe un certain nombre d'attaques sur le RSA  qui le rendent peu sûr \cite{1}. En fait, comme le RSA est déterministe, il ne peut pas être CPA-sùr. Cependant, nous pouvons au moins voir que l'idée d'un chiffrement homomorphe est réalisable car RSA est capable d'obtenir l'homomorphisme sans que ce soit son objectif.
-\subsection{Cryptosystème de Paillier}
+\section{Cryptosystème de Paillier}
 Dans cette section, nous explorons un schéma de chiffrement homomorphe additif proposé par Paillier en 1999 \cite{11}.Ce schéma utilise le problème de la classe de résidu composite, qui est étroitement lié au système RSA.Bien qu'il ne soit pas totalement homomorphe, le schéma de chiffrement de Paillier est utilisé dans de nombreuses  applications de machine learning  que nous explorons dans ce mémoire. Une caractéristique intéressante du cryptosystème de Paillier est qu'il est homomorphe sur un grand nombre de messages , c'est-à-dire sur $\mathbb{Z}_\mathbb{N}$. Un exemple courant de cas d'utilisation du cryptosystème de Paillier
 est le calcul du nombre de votes chiffrés, puisque les sommes résultantes peuvent atteindre des totaux élevés \cite{1}.Depuis sa création, le cryptosystème de Paillier a également subi des améliorations pour le rendre plus efficace .Nous décrivons l'algorithme ci-dessous (Algorithme 2), nous illustrons la réduction à RSA et nous donnons une
 preuve de sécurité, en suivant les exposés de \cite{11}, \cite{1}. En particulier, nous présentons de nombreux détails de \cite{11} mais pour la clarté de la présentation, nous utilisons la notation et la terminologie de \cite{1}.
-\subsection{Le système de chiffrement de Paillier}
+\subsection{Le système de chiffrement }
 Pour le cryptosystème de Paillier, l'espace de message M = $\mathbb{Z}_{N}$ ,l'espace de clés $\mathcal{K}$= $\mathcal{K}${_p_k}$ $ $\times$ $\mathcal{K}${_s_k}$ où $\mathcal{K}${_p_k}$=$\mathbb{Z}_{N}$ et l' espace des  chiffrés $\mathcal{C}$=$\mathbb{Z}_{N^2}$
 \begin{algorithm}[H]
   \Procedure{GEN}{$(1^\lambda)$}
@@ -85,7 +85,7 @@ Pour revenir à la démonstration de  l'exactitude du cryptosytéme, nous devons
   \epsilon_{g}:\mathbb{Z}_{N} \times \mathbb{Z^*}_{N} \longrightarrow  \mathbb{Z^*}_{N^2}\\
                (x,y) \longrightarrow  g^x.y^N (mod \ N^2)
 \end{align}
-\subsubsection{lemme}
+\subsubsection{lemme 1}
 Si l'ordre de g $\in$ $ \mathbb{Z^*}_{N^2}$ est un miltiple non nul de N ,alors $\epsilon_{g}$ est bijective
 \subsubsection{preuve}
 Nous allons d'abord montrer que  $\mathbb{Z}_{N} \times \mathbb{Z^*}_{N}$ et $ \mathbb{Z^*}_{N^2}$ ont le meme nombre d'élements,
@@ -139,3 +139,89 @@ Soit g $\in$ $ \mathbb{Z^*}_{N^2}$ ayant un ordre non nul multiple  de N. Nous a
   \epsilon_{g}([[w]]_{g},y) &=  ([[w]]_{g})^{g}.y^N =w
 \end{align*}
 Notez que ce problème est bien défini car $[[w]]_{g}$ est unique, ce qui vient du fait que $\epsilon_{g}$ est bijective (par le Lemme).
+\subsection{Réduction en RSA}
+\subsubsection{définition 3}
+Le $N^{ieme}$ problème de classe de résidu de la base g, Classe[N, g] est le problème suivant. Étant donné
+w $\in$ $ \mathbb{Z^*}_{N^2}$ et une base g, calculer  $[[w]]_{g}$ .\\
+
+Le résultat suivant nous montre  comment le problème de la $N^{ieme}$ Classe de Résiduosité nous donne un distinguateur D pour le problème de la résiduosité composite décisionnelle.
+\subsubsection{lemme 2}
+$[[w]]_{g}$ = 0 si et seulement si w est un Nième résidu modulo $N^2$ \\
+\subsubsection{Démonstration}
+Voir \cite{11} pour la démonstration.
+\\
+\\
+Ainsi, si nous pouvions résoudre le probléme de la $N^{ieme}$ classe de résidu, un simple distinguateur D pourrait prendre r et calculer $[[r]]_{g}$ pour un certain g approprié. Si le résultat est 0 , alors il sort 1 (en devinant que c'est un $N^{ieme}$ résidu).Sinon, il produit 0.Il est facile de voir que cela présente un avantage non négligeable.En effet, par le lemme 1 et le lemme précédent, une proportion non triviale d'éléments de $ \mathbb{Z^*}_{N^2}$ ne sont pas des $N^{ieme}$ résidus, c'est-à-dire exactement une proportion $\frac{N-1}{N}$ d'entre eux.
+\\
+Jusque ici , une instanciation particulière du problème de la $N^{ieme}$ classe de résidu dépend de plusieurs paramètres, à savoir N, g et w. D'après les deux lemmes suivants, il s'avère que tous ces paramètres n'influencent pas la difficulté du problème. Tout d'abord, notons que dans la construction de ce distinguateur, nous n'avons pas précisé quelle valeur de g choisir. Le lemme suivant nous montre que cela n'a pas d'importance.
+\subsubsection{lemme 3}
+La classe [N, g] est aléatoirement auto-réductible sur tous les g' dont l'ordre est un multiple non nul de N.
+\subsubsection{démonstration}
+Voir \cite{11} pour la démonstration
+\\
+\\
+Une autre propriété intéressante de la classe [N, g] est le fait qu'elle est aléatoirement auto-réductible. Plus précisément, nous pouvons réduire une instance du problème pour une valeur w $\in$ $ \mathbb{Z^*}_{N^2}$ en une instance aléatoire w' $\in $ $ \mathbb{Z^*}_{N^2}$    tiré d'une distribution uniforme.
+\subsubsection{lemme 4}
+La classe [N, g] est aléatoirement auto-réductible sur w $\in$ $ \mathbb{Z^*}_{N^2}$
+\subsubsection{démonstration}
+En effet, on peut facilement transformer tout w $\in$ $\mathbb{Z^*}_{N^2}$ en une instance aléatoire w' $\in$
+$\mathbb{Z^*}_{N^2}$ avec une distribution uniforme, en posant  $w' = w g^{a}b^n mod N^2$ où a et b sont pris uniformément au hasard sur $ \mathbb{Z}_{N}$  (l'événement b $\notin$ $ \mathbb{Z}_{N}$ se produit avec une probabilité négligeable). Après avoir calculé $[[w']]_{g}$ , il suffit de retourner $[[w]]_{g} = [[w']]{_g} - a mod N$.
+\\
+Ainsi, nous voyons que nos choix de w $\in$ $\mathbb{Z^*}_{N^2}$ et g un $N^{ieme}$ résidu modulo N n'affectent pas la difficulté du problème de la  $N^{ieme}$ classe de résidu. Par conséquent, il nous suffit de choisir le paramètre N, et nous pouvons donc désigner une instanciation de ce problème par Classe[N].
+
+\subsubsection{Théoréme (Réduction en RSA)}
+La classe [N] est réductible en RSA
+\subsubsection{Démonstration}
+Nous savons que les élements de la classe [N, g] avec un ordre non nul multiple de N sont équivalentes  à g .En utilisant g = 1 + N, nous avons seulement besoin de montrer que
+\begin{align*}
+  RSA \rightrightarrows Class[N, 1 + N]
+\end{align*}
+Supposons maintenant que nous ayons un oracle S pour RSA .
+\\
+On a  $c=(1+N)^{m}y^{N} mod \ N^2$ avec m  $\in$  $ \mathbb{Z}_{N}$  et y $\in$  $ \mathbb{Z^*}_{N}$ .En developpant  $(1+N)^m$ (avec la loi de binome) et en appliquant la reduction modulo N on obtient $c=y^N mod \ N$ et on peut calculer y en utilisant l'oracle  S .On a alors $y=S(c mod \ N)$ ainsi nous avons
+\begin{align*}
+              c&=(1+N)^my^N mod \ N^2\\
+ \frac{c}{y^N}&=(1+N)^m mod \ N^2\\
+              &=1+mN \ mod \ N^2
+\end{align*}
+Ainsi on pourra  calculer  $m = [[c]]_{1+N}$  , comme souhaité, ce qui résout la classe [N]
+\\
+Ainsi, nous avons montré que le problème décisionnel du  cryptosystème de Paillier et RSA sont des schémas de chiffremente étroitement liés en ce sens et  que le premier est au plus aussi difficile que la factorisation du RSA. Cependant, cela ne le rend pas automatiquement sûr. Ci-dessous, nous montrons que le cryptosystème de Paillier est CPA-sécurisé en supposant que le problème de résidu composite décisionnel est difficile, en utilisant une preuve  de \cite{1}.
+\subsection{Preuve de sécurité}
+Avant de présenter la preuve de la sécurité, nous montrons un résultat standard de la théorie des groupes.
+\subsubsection{proposition 3}
+Si G est un groupe fini et que g $\in$ G soit choisi arbitrairement. Alors, si on choisit une distribution uniforme
+k $\in$ G, alors la distribution de $ g \circ k$ ∈ G est également uniforme.
+\subsubsection{Démonstration}
+On a   pour tout g' $\in$ G ,il existe un k $\in$ G (c-à-d $k=g^{-1}\circ g'$) tel que \\
+$g \circ k=g\circ g^{-1} \circ g' =g'$
+\\
+Maintenant, nous pouvons prouver la sécurité CPA conditionnelle du cryptosystème de Paillier.
+\subsubsection{Théorème}
+Si le problème de résidu composite décisionnel est difficile, alors le cryptosystème de Paillier
+est CPA-sécurisé.
+\subsubsection{démonstration}
+Soit $ \epsilon = (GEN, ENC, DEC) $ le cryptosystème de Paillier. Comme le système de Paillier est un schéma de chiffrement à clé publique, il suffit de montrer que E est sécurisé par EAV. Alors, par la proposition 2 du chapitre 1 , cela implique qu'il est sécurisé par CPA.
+Nous allons construire  une réduction du problème de résidu composite décisionnel pour casser la sécurité EAV pour le cryptosystème de Paillier. Ensuite, comme nous supposons que le problème de résidu composite décisionnel est difficile, nous ne devons pas être en mesure de casser la sécurité EAV pour le cryptosystème de Paillier.
+Soit $\mathbb{A }$ un adversaire probabiliste en temps polynomial. Considérons l'algorithme D suivant qui tente de résoudre le problème de résidu composite décisionnel en se déroulant  comme suit et prenant en  entrée N, et y\\
+1.) Définir $ pk = N$ et exécuter $ \mathbb{A}(pk)$ pour obtenir deux messages $m_{0}$, $m_{1}$ $\in$ M\\
+\\
+2.)Choisir un bit uniforme b $\in$  $\{ 0,1 \}$   et calculer le  chiffré $c=(1 +N)^{m_{b}}.y mod \ N^2$\\
+3.)On donne le chiffré c à $\mathbb{A}$ comme challenge et $\mathbb{A}$  produit un bit b' .Si b=b'  on sort 1 sinon 0\\
+Premièrement, si l'entrée de D avait un y qui a été tiré de en prenant un aléa  r $\in$ $\mathbb{Z^*}_{N^2}$ et en l'élevant à la puissance N, on aura alors $c=(1 +N)^{m_{b}}.r^N mod \ N^2$ .Dans ce cas, nous notons que si  $\mathbb{A}$  a été capable de distinguer correctement les chifrés de $m_{0}$ et $m_{1}$ (c'est-à-dire si b = b'), cela est équivalent à ce que D réussisse à déterminer si y a été tiré uniformément de $\mathbb{Z^*}_{N^2}$ ou de $ Res(N^2)$ . Par conséquent, nous avons que.
+\begin{align*}
+Pr[ D(N,r^{N} mod \ N^2)=1]=Pr[PubK^{eav}{_A,_{\epsilon}}(n) =1]
+\end{align*}
+Maintenant, on observe que si notre entrée à D avait un y qui était tiré au hasard de $\mathbb{Z^*}_{N^2}$ , alors par la Proposition 3 précédent, le texte chiffré c est distribué uniformément dans $\mathbb{Z^*}_{N^2}$  ,indépendamment de m. Ainsi, la probabilité que $ b'= b$ est exactement $\frac{1}{2}$ et en particulier
+\begin{align*}
+  Pr[ D(N,r)=1]&=\frac{1}{2}
+\end{align*}
+Maintenant, en utilisant l'hypothèse que le problème de résidu composite décisionnel est dur, nous savons  alors  qu'il  existe une fonction négligeable negl telle que
+\begin{align*}
+  |Pr[D(N,r^{N} mod \ N^2)=1]- Pr[ D(N,r)=1]|\leq negl(n)
+\end{align*}
+ainsi , on a
+\begin{align*}
+   |Pr[PubK^{eav}{_A,_{\epsilon}}(n) =1]-\frac{1}{2}|\leq negl(n)
+\end{align*}
+Cela montre donc que le cryptosytéme de Paillier est sécurisé par EAV, et donc sécurisé par CPA.
