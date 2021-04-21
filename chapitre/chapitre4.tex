@@ -234,7 +234,7 @@ Jusqu'à présent, les systèmes que nous avons examinés (c'est-à-dire RSA et 
 D'autre part, un schéma de chiffrement totalement homomorphe nous permettrait d'évaluer des fonctions arbitraires sur les données. Le premier schéma de chiffrement totalement homomorphe a été proposé par Gentry \cite{3}, en utilisant une variante plus forte de l'hypothèse d'apprentissage avec erreurs pour les treillis idéaux et une hypothèse supplémentaire sur les sommes de sous-ensembles épars. Nous ne couvrons pas la construction de Gentry dans ce mémoire, mais notons qu'elle a servi de base à de nombreux schémas de chiffrement totalement homomorphes construits par la suite.\\
 
 Bien que le fait que nous puissions construire des schémas de chiffrement totalement homomorphes soit un énorme succès, cette flexibilité n'est pas sans inconvénients. En effet, comme indiqué dans \cite{12}, même si des solutions pour le chiffrement totalement homomorphe ont été constamment proposées et améliorées, les schémas de chiffrement totalement homomorphes semblent être loin d'être suffisamment efficaces pour être utilisés dans la pratique. Cependant, les schémas de chiffrement partiellement homomorphes ont tendance à être beaucoup plus rapides,  ce qui justifie leur utilisation dans de nombreuses applications de machine learning. Quoi qu'il en soit, nous poursuivons   dans ce qui suit une exploration du schéma de chiffrement totalement homomorphe de \cite{10}, basé sur les hypothèses LWE(learning with error).
-\subsection{LE problem LWE (learning with error )}
+\subsection{Le problem LWE (learning with error )}
  LWE est le  problème difficile  sur lequel repose le schéma de chiffrement entièrement homomorphe de \cite{10}. De manière informelle, cette hypothèse stipule que, étant donné $\mathbf{u}$ et$\langle \mathbf{u} , \mathbf{v} \rangle $ il est difficile de résoudre v si un petit terme de bruit est ajouté à $\langle \mathbf{u} , \mathbf{v} \rangle $. Nous donnons une définition formelle ci-dessous.
  \subsubsection{Définition 1}
  Étant donné un paramètre de sécurité $\lambda$, soit $ n = n(\lambda)$  une dimension entiére, $ q = q(\lambda) \geq 2$ un entier et $ \chi = \chi(\lambda)$  une distribution sur \mathbb{Z}. Le problème de l'apprentissage avec erreurs (LWE) est de distinguer les deux distributions suivantes :\\
@@ -384,3 +384,64 @@ alors le treillis $\wedge$ généré par la base $\mathbf{B}$ est l'ensemble
 \end{align}
 \subsubsection{Définition 5}
 Le treillis dual d'un treillis $\wedge$, noté $\wedge^* $ est $ \wedge^* = \Big\{{x \in \mathbf{R^n} |  \  \forall v \in \wedge,\langle \mathbf{x} , \mathbf{v} \rangle \in \mathbf{Z} \Big\}$ .
+\subsubsection{Définition 6}
+La distance minimale $\lambda_{l}(\wedge)$ d'un treillis $\wedge$ (dans la norme $l_{2}$ par défaut) est la distance minimale entre deux points distincts quelconques du treillis dans $\wedge$. Cela équivaut à la longueur du vecteur non nul le plus court du treillis, Soit
+\begin{align}
+  \lambda_{l}(\wedge)=\min_{x_{1} \neq x_{2} ,x_{1},x_{2} \in \wedge}\norm{x_{1}-x_{2}} = \min_{ c \neq 0; x \in \wedge}\norm{x}
+\end{align}
+\subsubsection{Définition 7}
+Étant donné une fonction $\gamma(n) \geq 1 $ , le problème du vecteur le plus court $GapSVP_{\gamma}(\mathbf{B}, d)$ , où $\mathbf{B}$ est une base d'un treillis à n dimensions $ \wedge = \mathcal{L}(\mathbf{B})$  et  $d \in \mathbb{R^+}$  est le problème de déterminer si .
+$ \lambda_{l}(\wedge) \leq d$. En particulier, il requiert une sortie de 1 si$ \lambda_{l}(\wedge) \leq d $ et une sortie de 0 si $\lambda_{l}(\wedge) > \gamma(n).d $\\
+\\
+En 2009, Peikert a prouvé une réduction d'une variante particulière du problème du plus court vecteur $ GapSVP_{\zeta,\gamma}$
+défini ci-dessous à des versions correspondantes du problème de l'apprentissage avec erreurs \cite{16}. Pour être complet, nous présentons l'énoncé et la preuve du théorème dans \cite{16}. Tout d'abord, nous définissons la variante $ GapSVP_{\zeta,\gamma}$  du problème du plus court vecteur
+\subsubsection{Définition 8}
+Étant donné les fonctions $ \zeta(n) \geq \gamma(n) \geq 1$, le problème du plus court vecteur $\zeta$-to-$\gamma$ $ GapSVP_{\zeta,\gamma}(\mathbf{B},b)$ ,où\\
+1.) $\mathbf{B}$ est une base d'un treillis à n dimensions $ \wedge = \mathcal{L}(\mathbf{B})$ où  $\lambda_{l}(\wedge) \leq \zeta(n).$ \\
+2.) $\min_{i}\norm{b_{i}} \geq 1$\\
+3.) $1 \leq d\leq \frac{\zeta(n)}{\gamma(n)}$\\
+est le problème consistant à déterminer si  $\lambda_{l}(\wedge) \leq d $. En particulier, il requiert une sortie de 1 si $\lambda_{l}(\wedge) \leq d $ et une sortie de 0 si $\lambda_{l}(\wedge) > \gamma(n).d $.\\
+\\
+Notons que pour tout $\zeta(n) \geq 2^{\frac{n}{2}} , $ GapSVP_{\zeta,\gamma}$  est équivalent au problème standard du plus court vecteur $ GapSVP_{\gamma}$ .
+Ceci est dû au fait que, par l'algorithme de Lensta-Lenstra-Lovász \cite{17}, une base arbitraire B pour un treillis $\wedge$ peut être réduite en temps polynomial à une autre base  B' qui couvre le même treillis, et telle que
+\begin{align}
+  \lambda_{l}(\wedge) \leq \norm{\mathbf{b'}_{1}} \leq 2^{\frac{n}{2}}.\min_{i}\norm{b_{i}}
+\end{align}
+Puisque nous pouvons toujours mettre à l'échelle la base du treillis d'origine B de telle sorte que $\min_{i}\norm{b_{i}} =1 $ , nous pouvons réduire toute instance du problème du plus court vecteur à une instance où la distance minimale est garantie comme étant inférieure à $2^{\frac{n}{2}}$. Cela rend la limite imposée par la condition (1) trivialement vraie. Nous n'avons pas à nous soucier des conditions (2) et (3) car nous pouvons toujours réduire les bases de sorte que (2) soit vraie, et la solution est triviale si (3) n'est pas vraie (et si (1) et (2) sont toutes deux vraies).\\
+\\
+Maintnantnous allons   passer à la réduction, nous énonçons quelques lemmes qui seront utilisés. Pour un traitement plus complet de l'objet de ces lemmes, voir \cite{16}. Pour la notation, on désigne par $B_{n} \subset \mathbf{R^n}$ la boule unitaire ouverte (dans la norme $ l_{2}$), c'est-à-dire l'ensemble $ B_{n} = \{x \in \mathbf{R^n} \ | \norm{\mathbf{x}} \leq 1 \}$ .
+\subsubsection{lemme 5}
+Soit $\Delta(X,Y)$ la différence statistique entre les distributions X et Y , et U(S) la distribution uniforme sur un ensemble S. Pour toute constante c, d > 0 et tout $z \in \mathbf{R^n}$ avec $\norm{z} <d $,et
+$ d'=d.\sqrt{\frac{n}{c\log(n)}} $ , on obtient que
+\begin{align}
+  \Delta(U(d'.B_{n}),U(\mathbf{z}+d'.B_{n})) \leq 1 -\frac{1}{poly(n)}
+\end{align}
+\subsubsection{Démonstration}
+Voir \cite{18} pour la démonstration
+
+Nous utilisons également le concept de paramètre de lissage de \cite{19}. Intuitivement, le paramètre de lissage
+est le plus petit r qui lisse la structure discrète de $\wedge$, jusqu'à une certaine erreur statistique .\\
+Nous allons énoncer le théorème de la réduction ,il y'a d'aures lemmes intéressants qui pourront aider à la comprehension et à la démonstration du théorème ,nous allons renvoyer la lecteur à \cite{16} pour un traitement complet
+\subsubsection{Theoréme}
+ Soit $ \alpha = \alpha(n) \in (0, 1) $  et $ \gamma = \gamma(n) \geq \frac{n}{\alpha\sqrt{\log(n)}}$ .
+ Soit $ \zeta = \zeta(n) \geq \gamma(n)$ et $ q = q(n) \geq \zeta(n).ω\sqrt{\frac{\log(n)}{n}} $ . Alors, il existe une réduction probabiliste en temps polynomial de la résolution de $ GapSVP_{\zeta,\gamma}$  dans le pire des cas (avec une probabilité écrasante) à la résolution de $ LWE_{q,Ψa}$ en utilisant des échantillons poly(n).
+ \subsubsection{Démonstration}
+ voir \cite{16} pour la démonstration\\
+ \\
+ Cependant, \cite{16} ne fonctionne que pour les problèmes LWE avec de grands modules $ q \geq $q 2^{\frac{n}{2}}$ . Plus tard, il est  prouvé une réduction similaire qui fonctionne pour des modules polynomiaux. Ces résultats montrent que le GapSVP peut être réduit au LWE.
+ \section{Encodage des nombres réels}
+ Un détail technique important qui doit être discuté lors de l'examen des applications des schémas de chiffrement partiellement/totalement homomorphes aux algorithmes d'apprentissage automatique est le codage des nombres réels.La plupart des schémas de chiffrement homomorphes utilisent $\mathbf{Z}_q$ pour un certain q comme espace de message. Par conséquent, ils sont naïvement incapables de chiffrer des valeurs réelles. Dans cette section, nous explorons brièvement une méthode de codage de nombres réels employée dans les applications de machine learning  utilisées dans \cite{20}, \cite{21}.\\
+ \\
+ Dans \cite{20}, les nombres réels sont comme des vecteurs de bits signés(+ ou -) de taille $ L + l + 1$ bits, et un nombre réel $a \in \mathbf{R} $ est représenté par .
+ \begin{align}
+   a=\sum_{-L}^{l}a_{k}2^k
+ \end{align}
+ où $ a_{k} \in \{0, 1\}$  si  $ a \geq 0$ et  $a_{k} \in \{0, -1\}$  si $ a < 0 $\\ Pour les opérations sur les nombres réels avec ce codage, on a
+ \begin{align*}
+   a + b= \sum_{-L}^{l}(a_{k}+b_{k})2^k=\Big\langle [2^{-L},.....2^{0}......,2^{l}],(Bits(a)+Bits(b)) \Big\rangle
+ \end{align*}
+ \begin{align*}
+   ab&=\Big\langle [2^{-L},.....2^{0}......,2^{l}],(Bits(a) \Big\rangle.\Big\langle Bits(b), [2^{-L},.....2^{0}......,2^{l}] \Big\rangle \\
+   &=[2^{-L},.....2^{0}......,2^{l}].\Big\langle Bits(a),Bits(b) \Big\rangle.[2^{-L},.....2^{0}......,2^{l}]
+ \end{align*}
+ Notez que ce schéma de codage est flexible, car nous pouvons choisir L à l'avance pour obtenir la précision décimale souhaitée et l pour définir notre valeur entière maximale.  On pourrait craindre que cette perte de précision n'ait peut avoir un impact négatif sur les performances prédictives de nos algorithmes d'apprentissage automatique. Cependant, des chercheurs  on étudié l'impact de la perte de précision sur des algorithmes tels que les classificateurs de réseau bayésien  et n'ont constaté aucune perte de performance significative, à condition que les probabilités ne soient pas trop proches de 0 ou de 1 et que les probabilités postérieures sur les classes soient suffisamment différentes. sur les classes sont suffisamment différentes \cite{22} . Cela suggère qu'il existe des algorithmes d'apprentissage algorithmes d'apprentissage automatique capables de tolérer un certain niveau de perte de précision.

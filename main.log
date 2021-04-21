@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.9)  21 APR 2021 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.3.9)  22 APR 2021 01:33
 entering extended mode
 **./main.tex
 (main.tex
@@ -1523,13 +1523,13 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@dim=\dimen301
 )
 
-main.tex:66: LaTeX Error: Option clash for package biblatex.
+main.tex:68: LaTeX Error: Option clash for package biblatex.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 \makeatletter
+l.68 \makeatletter
                   
 The package biblatex has already been loaded with options:
   []
@@ -1541,96 +1541,96 @@ to your \documentclass declaration may fix this.
 Try typing  <return>  to proceed.
 
 
-main.tex:90: LaTeX Error: Missing \begin{document}.
+main.tex:92: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.90 \maketitle{
+l.92 \maketitle{
                 }
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 90.
+(Font)              scaled to size 20.74pt on input line 92.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 90.
+(Font)              scaled to size 14.4pt on input line 92.
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 90.
+e 92.
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 90.
+(Font)              scaled to size 14.4pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.5pt on input line 90.
+(Font)              scaled to size 10.5pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.9pt on input line 90.
+(Font)              scaled to size 7.9pt on input line 92.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 90.
+ 92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 90.
+ 92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 90.
+e 92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-90.
+92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-90.
+92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-90.
+92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-90.
+92.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 90.
+(Font)              scaled to size 14.4pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.5pt on input line 90.
+(Font)              scaled to size 10.5pt on input line 92.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 7.9pt on input line 90.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
+(Font)              scaled to size 7.9pt on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
 
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
 
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-main.tex:90: Undefined control sequence.
+main.tex:92: Undefined control sequence.
 \set@color ...\@pdfcolorstack push{\current@color 
                                                   }\aftergroup \reset@color 
-l.90 \maketitle{
+l.92 \maketitle{
                 }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1638,10 +1638,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-main.tex:90: Undefined control sequence.
+main.tex:92: Undefined control sequence.
 \set@color ...\@pdfcolorstack push{\current@color 
                                                   }\aftergroup \reset@color 
-l.90 \maketitle{
+l.92 \maketitle{
                 }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1654,31 +1654,44 @@ and I'll forget about whatever was undefined.
 {C:/Users/user/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 \@quotelevel=\count460
 \@quotereset=\count461
- (main.aux)
+ (main.aux
+
+main.aux:300: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 n
+       text{0}{14}{nty/global//global/global}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
-LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
@@ -1710,7 +1723,7 @@ Package newfloat Info: `float' package detected.
 Package newfloat Info: `wrapfig' package detected.
 \c@mv@tabular=\count468
 \c@mv@boldtabular=\count469
-Package hyperref Info: Link coloring ON on input line 91.
+Package hyperref Info: Link coloring ON on input line 93.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1724,16 +1737,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count470
 )
-LaTeX Info: Redefining \ref on input line 91.
-LaTeX Info: Redefining \pageref on input line 91.
-LaTeX Info: Redefining \nameref on input line 91.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 91.
+(lastpage)             ! on input line 93.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1758,12 +1771,12 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 91.
-Package biblatex Info: Reference segment=0 on input line 91.
+Package biblatex Info: Reference section=0 on input line 93.
+Package biblatex Info: Reference segment=0 on input line 93.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 92.
+(Font)              scaled to size 24.88pt on input line 94.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 92.
+(Font)              scaled to size 24.88pt on input line 94.
  (main.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
@@ -1785,12 +1798,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...ographie à clé privée}{10}{section.1.3}
+l.43 ...laintext Attack CPA)}{8}{subsection.1.3.2}
                                                   % [1]
 main.toc:109: Misplaced alignment tab character &.
 <argument> ...mberline {3.5.1}théoréme (Eckart &
                                                    Young,1936)}\hyper@linkend 
-l.109 ...kart & Young,1936)}{27}{subsection.3.5.1}
+l.109 ...kart & Young,1936)}{23}{subsection.3.5.1}
                                                   %
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1810,9 +1823,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
- [4
 
-]
 
 chapitre/chapitre1.tex:10: LaTeX Error: There's no line here to end.
 
@@ -1832,6 +1843,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
 
+[4
+
+]
 chapitre/chapitre1.tex:21: Missing $ inserted.
 <inserted text> 
                 $
@@ -2432,7 +2446,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
@@ -3138,6 +3152,7 @@ Overfull \hbox (20.1433pt too wide) in paragraph at lines 118--124
 jec-tiv-it�, puis l'�quiprobabilit�.
  []
 
+[8]
 chapitre/chapitre1.tex:125: Missing \right. inserted.
 <inserted text> 
                 \right .
@@ -3367,7 +3382,6 @@ l.127 ...right]$ = Pr$\left[K=$\kappa$(m) ]\right]
                                                   $ = Pr$\left[C=c ]\right]$...
 I'm ignoring a \right that had no matching \left.
 
-[9]
 chapitre/chapitre1.tex:134: Misplaced alignment tab character &.
 l.134   Une fonction F de $\mathbf{N} &
                                         \longrightarrow &\mathbf{R}$ est dit...
@@ -3455,6 +3469,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+[9]
 chapitre/chapitre1.tex:146: Missing $ inserted.
 <inserted text> 
                 $
@@ -3671,7 +3686,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--158
 
  []
 
-[10]
 chapitre/chapitre1.tex:161: Missing \right. inserted.
 <inserted text> 
                 \right .
@@ -3967,7 +3981,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--193
 
  []
 
-[11]
+[10]
 chapitre/chapitre1.tex:198: Missing \right. inserted.
 <inserted text> 
                 \right .
@@ -4259,7 +4273,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-
+[11]
 Overfull \hbox (9.28206pt too wide) in paragraph at lines 210--210
 |[]\T1/ntxtlf/b/n/14.4 Attaque � chiffr� choisi (Choosen Ci-pher text At-tack)(
 CCA)| 
@@ -4441,7 +4455,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--236
 
  []
 
-[12] [13]
+[12]
 chapitre/chapitre1.tex:239: Missing \right. inserted.
 <inserted text> 
                 \right .
@@ -4486,6 +4500,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 245--251
 
  []
 
+[13]
 
 chapitre/chapitre1.tex:256: Package inputenc Error: Unicode character − (U+22
 12)
@@ -4501,10 +4516,9 @@ l.256 Une fonction H $\{ 0,1 \}^*$−
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[14]
 LaTeX Font Info:    Trying to load font information for U+eus on input line 265
 .
- (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
 chapitre/chapitre1.tex:265: Missing $ inserted.
@@ -4742,14 +4756,13 @@ l.275 ...séquent, A peut calculer Enc{_p_k}$\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-)
+) [14]
 Chapter 2.
 (chapitre/chapitre2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 105--1
+Underfull \hbox (badness 10000) in paragraph at lines 107--1
 
  []
 
-[15]
 chapitre/chapitre2.tex:8: Missing $ inserted.
 <inserted text> 
                 $
@@ -4816,7 +4829,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--24
 
  []
 
-[16] [17]
+[15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 29--33
 
  []
@@ -4831,7 +4844,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
  []
 
-[18]
+[17]
 
 chapitre/chapitre2.tex:52: LaTeX Error: Bad math environment delimiter.
 
@@ -5264,7 +5277,6 @@ Overfull \hbox (7.33089pt too wide) in paragraph at lines 52--58
  il est facile � casser.Comme
  []
 
-[19]
 chapitre/chapitre2.tex:62: Missing $ inserted.
 <inserted text> 
                 $
@@ -5282,6 +5294,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+[18]
 chapitre/chapitre2.tex:64: Missing $ inserted.
 <inserted text> 
                 $
@@ -5600,36 +5613,37 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 64--110
+Underfull \hbox (badness 10000) in paragraph at lines 64--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--110
+Underfull \hbox (badness 10000) in paragraph at lines 64--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--110
+Underfull \hbox (badness 10000) in paragraph at lines 64--112
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--110
+Underfull \hbox (badness 10000) in paragraph at lines 64--112
 
  []
 
-[20]
 Chapter 3.
 (chapitre/chapitre3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 112--1
+Underfull \hbox (badness 10000) in paragraph at lines 114--1
 
  []
 
+[19]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 5.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.6pt on input line 5.
+
 chapitre/chapitre3.tex:7: Undefined control sequence.
 l.7     \centeryy
                   ning
@@ -5639,7 +5653,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images//1.PNG, id=359, 657.95813pt x 253.69781pt>
+<images//1.PNG, id=381, 657.95813pt x 253.69781pt>
 File: images//1.PNG Graphic file (type png)
 <use images//1.PNG>
 Package pdftex.def Info: images//1.PNG  used on input line 8.
@@ -5654,7 +5668,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--12
 
  []
 
-[21]
+[20]
 
 chapitre/chapitre3.tex:14: LaTeX Error: There's no line here to end.
 
@@ -5737,7 +5751,6 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[22 <./images//1.PNG>]
 
 chapitre/chapitre3.tex:18: LaTeX Error: \mathbf allowed only in math mode.
 
@@ -5922,6 +5935,7 @@ l.29   \end{equation}
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
+[21 <./images//1.PNG>]
 chapitre/chapitre3.tex:31: Missing $ inserted.
 <inserted text> 
                 $
@@ -6112,7 +6126,6 @@ l.51  \end{equation}
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[23]
 chapitre/chapitre3.tex:52: Missing $ inserted.
 <inserted text> 
                 $
@@ -6186,6 +6199,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+[22]
 chapitre/chapitre3.tex:67: Missing $ inserted.
 <inserted text> 
                 $
@@ -6254,7 +6268,6 @@ l.73 ...é un point x, on calcule $\textbf{w}^{*}^
                                                   \intercal$x et on classe  ...
 I treat `x^1^2' essentially like `x^1{}^2'.
 
-[24]
 chapitre/chapitre3.tex:83: Missing $ inserted.
 <inserted text> 
                 $
@@ -6390,6 +6403,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[23]
 chapitre/chapitre3.tex:86: Missing $ inserted.
 <inserted text> 
                 $
@@ -7044,7 +7058,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--99
 
  []
 
-[25]
 
 LaTeX Warning: Command \' invalid in math mode on input line 109.
 
@@ -7108,6 +7121,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+[24]
 
 chapitre/chapitre3.tex:113: LaTeX Error: \begin{equation} on input line 112 end
 ed by \end{equation*}.
@@ -7204,7 +7218,6 @@ l.120 ...ombre de dimensions(ex $\{0,1 \}^d $ a 2^
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[26]
 chapitre/chapitre3.tex:125: Missing $ inserted.
 <inserted text> 
                 $
@@ -7322,12 +7335,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 133--117
+[25])
+Underfull \hbox (badness 10000) in paragraph at lines 133--119
 
  []
 
-[27]
+[26]
 Chapter 4.
 (chapitre/chapitre4.tex
 chapitre/chapitre4.tex:6: Missing \endcsname inserted.
@@ -7811,7 +7824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--24
 
  []
 
-[28
+[27
 
 ]
 
@@ -7842,7 +7855,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[29] [30]
+[28] [29]
 chapitre/chapitre4.tex:52: Missing $ inserted.
 <inserted text> 
                 $
@@ -8261,7 +8274,6 @@ Underfull \hbox (badness 10000) detected at line 71
 [][]
  []
 
-[31]
 chapitre/chapitre4.tex:80: Misplaced alignment tab character &.
 l.80   z &
           \equiv y^N \mod N^2 \\
@@ -8311,6 +8323,7 @@ I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
+[30]
 chapitre/chapitre4.tex:82: Missing $ inserted.
 <inserted text> 
                 $
@@ -8330,7 +8343,6 @@ l.82 \end{equation}
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-[32]
 chapitre/chapitre4.tex:107: Misplaced alignment tab character &.
 l.107 ... g^{x{_2}-x{_1}}(\frac{y_{2}}{y_{1}})^N &
                                                   \equiv 1 \mod N^2 $. soit ...
@@ -8454,7 +8466,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--111
 
  []
 
-[33]
+[31]
 
 chapitre/chapitre4.tex:112: LaTeX Error: \mathbb allowed only in math mode.
 
@@ -8484,7 +8496,7 @@ l.112 ...tain m $\in$ \mathbb{Z}_{N}  , alors$DEC_
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-[34]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
@@ -8499,12 +8511,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--157
 
  []
 
-[35]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 160--164
 
  []
 
-[36] [37]
+[34]
 
 chapitre/chapitre4.tex:194: Package inputenc Error: Unicode character ∈ (U+22
 08)
@@ -8519,17 +8531,17 @@ l.194 ...alors la distribution de $ g \circ k$ ∈
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-
+[35]
 Underfull \hbox (badness 10000) in paragraph at lines 204--212
 
  []
 
-[38]
+[36]
 Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
-[39] [40]
+[37]
 
 chapitre/chapitre4.tex:240: LaTeX Error: \mathbb allowed only in math mode.
 
@@ -8548,7 +8560,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
-[41]
+[38]
 chapitre/chapitre4.tex:261: Missing $ inserted.
 <inserted text> 
                 $
@@ -8557,6 +8569,7 @@ l.261
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
+[39]
 chapitre/chapitre4.tex:263: Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@1 
@@ -8878,7 +8891,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[42]
+
 Overfull \hbox (81.6737pt too wide) in paragraph at lines 283--287
 \T1/ntxtlf/m/n/12 2)Pour a de di-men-sion N ,Si $\OML/ntxmi/m/it/12 a[] \U/ntxm
 ia/m/it/12 = \OML/ntxmi/m/it/12 BitDecomp\LMS/ntxsy/m/n/12 �\OML/ntxmi/m/it/12 
@@ -8889,7 +8902,7 @@ mp[]\LMS/ntxsy/m/n/12 �[]�\OML/ntxmi/m/it/12 ; \OT1/ntxtlf/b/n/12 b\LMS/ntxsy/m
 /n/12 i \U/ntxmia/m/it/12 =
  []
 
-[43]
+[40]
 
 LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 3
 03.
@@ -9501,7 +9514,7 @@ Underfull \hbox (badness 10000) detected at line 329
 [][]
  []
 
-[44]
+[41]
 chapitre/chapitre4.tex:337: Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@1 
@@ -9850,7 +9863,7 @@ Underfull \hbox (badness 10000) detected at line 352
 [][]
  []
 
-[45]
+[42]
 chapitre/chapitre4.tex:357: Missing \endcsname inserted.
 <to be read again> 
                    \ALG@currentblock@1 
@@ -10163,7 +10176,7 @@ Underfull \hbox (badness 10000) detected at line 371
 [][]
  []
 
-[46] [47]
+[43] [44]
 chapitre/chapitre4.tex:386: Missing } inserted.
 <inserted text> 
                 }
@@ -10175,103 +10188,350 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 386--126
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--398
+
+ []
+
+chapitre/chapitre4.tex:405: Missing $ inserted.
+<inserted text> 
+                $
+l.405 ...\zeta(n) \geq 2^{\frac{n}{2}} , $ GapSVP_
+                                                  {\zeta,\gamma}$  est équi...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Citation '17' on page 45 undefined on input line 406.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 399--407
+
+ []
+
+[45]
+Underfull \hbox (badness 10000) in paragraph at lines 409--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--126
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--126
-
- []
-
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-125.
-(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
-File: t1ntxtt.fd 2012/04/20 v3.1
-)
-LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 125.
-
-Overfull \hbox (98.30057pt too wide) in paragraph at lines 126--126
-[]\T1/ntxtlf/m/n/12 Amit Sa-hai Craig Gen-try and Brent Wa-ters. |   [].
- []
-
-
-main.tex:126: Package inputenc Error: Unicode character ∗ (U+2217)
+chapitre/chapitre4.tex:427: Package inputenc Error: Unicode character ω (U+03C
+9)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \end
+l.427 ...\gamma(n)$ et $ q = q(n) \geq \zeta(n).ω
+                                                  \sqrt{\frac{\log(n)}{n}} $...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+chapitre/chapitre4.tex:427: Package inputenc Error: Unicode character Ψ (U+03A
+8)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...rasante) à la résolution de $ LWE_{q,Ψ
+                                                  a}$ en utilisant des écha...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[46]
+chapitre/chapitre4.tex:431: Missing $ inserted.
+<inserted text> 
+                $
+l.431 ...LWE avec de grands modules $ q \geq $q 2^
+                                                  {\frac{n}{2}}$ . Plus tard...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--436
+
+ []
+
+[47]
+
+LaTeX Warning: Citation '22' on page 48 undefined on input line 447.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 446--125
+
+ []
+
+[48]
+Chapter 5.
+(chapitre/chapitre5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 127--1
+
+ []
+
+[49
+
+]
+chapitre/chapitre5.tex:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...}^{*}$ $\propto$  $\mathbf{S}{_W}^{-1}$(u{_
+                                                  2} $-u{_1} $)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre5.tex:5: Extra }, or forgotten $.
+l.5 ...{*}$ $\propto$  $\mathbf{S}{_W}^{-1}$(u{_2}
+                                                   $-u{_1} $)
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre5.tex:5: Missing $ inserted.
+<inserted text> 
+                $
+l.5 ...\propto$  $\mathbf{S}{_W}^{-1}$(u{_2} $-u{_
+                                                  1} $)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+chapitre/chapitre5.tex:5: Extra }, or forgotten $.
+l.5 ...ropto$  $\mathbf{S}{_W}^{-1}$(u{_2} $-u{_1}
+                                                   $)
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+chapitre/chapitre5.tex:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{center}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+chapitre/chapitre5.tex:6: Missing } inserted.
+<inserted text> 
+                }
+l.6 \end{center}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[50]
+
+chapitre/chapitre5.tex:24: Package inputenc Error: Unicode character ∗ (U+221
+7)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 ...voir que la kième approximation pour w∗
+                                                  .
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+chapitre/chapitre5.tex:29: Package inputenc Error: Unicode character η (U+03B7
+)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 ... à son vecteur propre dominant) de I - η
+                                                  SW est inférieur à 1. Ce...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[51])
+
+main.tex:134: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+main.tex:135: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 \printbibliography
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+main.tex:136: Package inputenc Error: Unicode character ∗ (U+2217)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[48]
-Overfull \hbox (93.4528pt too wide) in paragraph at lines 126--126
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
+135.
+(C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/newtx\t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 12.0pt on input line 135.
+
+Overfull \hbox (1.7725pt too wide) in paragraph at lines 136--136
+[]\T1/ntxtlf/m/n/12 Zvika Brak-er-ski. ``Fully Ho-mo-mor-phic En-cryp-tion with
+-out Mod-u-lus Switch-
+ []
+
+
+Overfull \hbox (98.30057pt too wide) in paragraph at lines 136--136
+[]\T1/ntxtlf/m/n/12 Amit Sa-hai Craig Gen-try and Brent Wa-ters. |   [].
+ []
+
+
+main.tex:136: Package inputenc Error: Unicode character ∗ (U+2217)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \end
+          {document}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (2.7444pt too wide) in paragraph at lines 136--136
+[]\T1/ntxtlf/m/n/12 Oded Gol-dre-ich and Shafi Gold-wasser. ``On the lim-its of
+ non-approximability
+ []
+
+[52]
+Overfull \hbox (93.4528pt too wide) in paragraph at lines 136--136
 []\T1/ntxtlf/m/n/12 Yehuda Lin-dell Jonathan Katz. |   [].
  []
 
 
-Overfull \hbox (9.70811pt too wide) in paragraph at lines 126--126
+Overfull \hbox (9.70811pt too wide) in paragraph at lines 136--136
 []\T1/ntxtlf/m/n/12 Kevin P. Mur-phy. |   []. \T1/ntxtlf/m/sc/12 url\T1/ntxtlf/
 m/n/12 : [][]$\T1/ntxtt/m/n/12 http :
  []
 
 
-Overfull \hbox (82.23288pt too wide) in paragraph at lines 126--126
+Overfull \hbox (82.23288pt too wide) in paragraph at lines 136--136
 []\T1/ntxtlf/m/n/12 Pascal Pail-lier. |   [].
  []
 
 
-Overfull \hbox (37.56892pt too wide) in paragraph at lines 126--126
+main.tex:136: Package inputenc Error: Unicode character ∗ (U+2217)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \end
+          {document}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (37.56892pt too wide) in paragraph at lines 136--136
 []\T1/ntxtlf/m/n/12 Djiby SOW. |   [].
  []
 
 
-main.tex:126: Package inputenc Error: Unicode character ∗ (U+2217)
+Overfull \hbox (13.3765pt too wide) in paragraph at lines 136--136
+[]\T1/ntxtlf/m/n/12 Kristin Lauter Thore Grae-pel and Michael Naehrig. ``ML Con
+-fi-den-tial:Machine
+ []
+
+
+main.tex:136: Package inputenc Error: Unicode character ∗ (U+2217)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \end
+l.136 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
+[53]
 
-main.tex:126: Package inputenc Error: Unicode character ∗ (U+2217)
+main.tex:136: Package inputenc Error: Unicode character ∗ (U+2217)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 \end
+l.136 \end
           {document}
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-[49]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 30.
 See the caption package documentation for explanation.
 
 
 AED: lastpage setting LastPage
-[50] (main.aux)
+[54] (main.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 01AE4391448CC3EFF50177E0381A77E1;10000.
+(rerunfilecheck)             Checksum: A31AA0B41D35CEA25D3134DF32A641FB;11218.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -10290,13 +10550,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### simple group (level 1) entered at line 125 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 34166 strings out of 479334
- 612932 string characters out of 2857560
- 1382582 words of memory out of 3000000
- 50780 multiletter control sequences out of 15000+200000
- 507096 words of font info for 167 fonts, out of 3000000 for 9000
+ 34228 strings out of 479334
+ 614014 string characters out of 2857560
+ 1382869 words of memory out of 3000000
+ 50804 multiletter control sequences out of 15000+200000
+ 508200 words of font info for 169 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,18n,89p,941b,1831s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 87i,18n,89p,1034b,1847s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ne
 wtx/ntx-ec-tlf-pc.enc}{C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/enc/dv
 ips/newtx/ntx-ot1-tlf.enc}{C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/en
@@ -10314,9 +10574,9 @@ ser/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txmiaX.pfb><C:/Users
 ers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txsys.pfb><C:/U
 sers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/U
 sers/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (51 pages, 446666 bytes).
+Output written on main.pdf (55 pages, 484417 bytes).
 PDF statistics:
- 724 PDF objects out of 1000 (max. 8388607)
- 191 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 834 PDF objects out of 1000 (max. 8388607)
+ 224 named destinations out of 1000 (max. 500000)
+ 394 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,41 @@
+\section{Classification binaire}
+\subsubsection{Discriminante linéaire de Fisher}
+Rappelons que le but de la discriminante linéaire de Fisher est de trouver un vecteur $\mathbf{w}$ sur lequel nous pouvons projeter les données et qui maximise le rapport entre les variances interclasses et les variances intraclasses. En suivant la présentation de \cite{7}, nous avons trouvé que le choix optimal de w était :
+\begin{center}
+  $\mathbf{w}^{*}$ $\propto$  $\mathbf{S}{_W}^{-1}$(u{_2} $-u{_1} $)
+\end{center}
+et en particulier, si nous voulons classifier, nous devons d'abord calculer $ c = \mathbf{w^*}^\intercal(\frac{\mathbf{u_{1}}+\mathbf{u_{2}}}{2}) $ où $\frac{\mathbf{u_{1}}+\mathbf{u_{2}}}{2}$ est le point médian entre les deux moyennes dans la direction donnée par w. Ensuite, nous pouvons classifier le point $x_{k}$ en comparant $ \mathbf{w^*}^\intercal x_{k}$ à c\\
+Bien que \cite{21} ne spécifie pas un schéma de chiffrement particulier, il mentionne qu'il a l'intention de faire fonctionner cet algorithme sur un schéma de chiffrement partiellement homomorphe  qui supporte les additions et les multiplications limitées. Par conséquent, ils définissent la notion d'un algorithme D-polynomial, ce qui signifie que l'algorithme peut être exprimé comme un polynôme de degré borné.\\
+Cependant, comme nous pouvons le voir, la détermination de ce w optimal nécessite l'inversion de la matrice $\mathbf{S^{-1}}_{W}$, qui à son tour nécessite une division et n'est donc pas D-polynomiale \cite{21}. Dans \cite{21}, ils présentent une approche par les moindres carrés pour calculer une approximation du vecteur optimal $\mathbf{w^{*}}$ . L'idée est que nous pouvons définir une fonction d'erreur et la minimiser en utilisant des algorithmes comme la descente de gradient.\\
+De manière plus détaillée, soit $ \mathbf{d} = \mathbf{u}_{1} - \mathbf{u}_{2}$ être la différence entre les moyennes conditionnelles de classe.Ensuite, supposons que nous essayons de minimiser une fonction de coût raisonnable (notez que le $\mathbf{w} $ optimale est $ \mathbf{w} =\mathbf{S^{-1}}_{W}.\mathbf{d} = \mathbf{S^{-1}}_{W} (\mathbf{u}_{2} - \mathbf{u}_1)$ ).
+\begin{align}
+  E(\mathbf{w})=\frac{1}{2}\norm{ \mathbf{S}_{W}-d}
+\end{align}
+à l'exception qu'au lieu de la norme euclidienne standard, comme dans \cite{21}, nous utilisons $ \norm{\mathbf{v}}^2 = \mathbf{v}^\intercal \mathbf{S}_{W} \mathbf{v}$
+pour un meilleur conditionnement. Pour minimiser cette fonction de coût, nous prenons d'abord le gradient, ce qui donne
+\begin{align}
+  \Delta_{w}(E(\mathbf{w}))=\mathbf{S}_{W}\mathbf{w}-\mathbf{d}
+\end{align}
+Ainsi, si on applique la descente de gradient avec un taux d'apprentissage $\eta$, on constate qu'à chaque étape, on fait
+\begin{align*}
+  \mathbf{w}_{i+1}&=\mathbf{w}_i-\eta(\mathbf{S}_{W}\mathbf{w}_i +\mathbf{d})\\
+                  &=(\mathbf{I}-\eta\mathbf{S}_{W})\mathbf{w}_{i}-\eta\mathbf{d}
+\end{align*}
+Ensuite, si on commence avec w0 = 0, on peut analyser la récurrence pour voir que la kième approximation pour w∗.
+est
+\begin{align*}
+  \mathbf{w}_{k}=\eta\sum_{i=0}^{k-1}(\mathbf{I}-\eta\mathbf{S}_{W})^{i}\mathbf{d}
+\end{align*}
+Cet algorithme convergera si le rayon spectral (ou la norme  de la valeur propre correspondant à son vecteur propre dominant) de I - ηSW est inférieur à 1. Cependant, nous pouvons toujours y parvenir en choisissant $\eta$ suffisamment petit. Il est facile de voir que cet algorithme est D-polynomial avec $ D = 2(k +1) + 1 $
+\section{Regression lineaire}
+Dans cette section, nous étudions comment mettre en œuvre la régression linéaire, un algorithme de machine learning  très fondamental, en utilisant un schéma de chiffrement homomorphe. Notez que la construction précédente montre  on appliquer un algorithme de descente de gradient pour le discriminant linéaire de Fisher et qui peut également être appliqué à la régression linéaire, mais nous n'irons pas plus loin dans ce domaine. La construction que nous explorons ici est due à \cite{23} et nous permet d'effectuer la régression sur les données chifrés. Ils mettent en œuvre un schéma de chiffrement entièrement homomorphe  similaire à celui discuté dans \cite{24}. Ainsi, leurs limitations ne sont pas tant sur les opérations qu'ils peuvent effectuer, mais plutôt sur la surcharge de performance liée à l'utilisation d'un schéma de entièrement homomorphe.\\
+Rappelons brièvement qu'en régression linéaire, nous modélisons la variable de sortie comme une fonction linéaire des variables d'entrée plus un terme d'erreur normalement distribué, c'est à dire.
+\begin{align}
+  y= \langle \beta , \mathbf{x} \rangle +\epsilon
+\end{align}
+Pour résoudre le $\beta$, nous calculons le $\beta$ qui minimise l'erreur des moindres carrés. Rappelons que si X désigne la matrice de conception $ d \times n$ la solution en forme  du problème d'optimisation ci-dessus est la suivante
+\begin{align}
+  \beta^{*}=(X^\intercal X)^{-1}X^\intercal y
+\end{align}
+Notez que les multiplications matricielles et les multiplications matrice-vecteur peuvent être facilement traitées par les sytemes partiellement homomorphe tels que le cryptosystème de Paillier, car ils supportent l'addition et la multiplication. Cependant, l'inversion de matrice est un peu plus problématique. Heureusement, \cite{23} mentionne que nous pouvons utiliser la règle de Cramer pour calculer ces inverses. Tout d'abord, nous énonçons la règle de Cramer
+\subsubsection{Theoréme 1( la régle de Cramer)}

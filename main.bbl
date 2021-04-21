@@ -19,6 +19,58 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{19}{article}{}
+      \name{author}{1}{}{%
+        {{hash=afb3ca9963ad80bde8315a3830d34337}{%
+           family={‡.},
+           familyi={‡\bibinitperiod},
+           given={Daniele\bibnamedelimb Micciancio\bibnamedelimb †\bibnamedelimb Oded\bibnamedelima Regev},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim †\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{afb3ca9963ad80bde8315a3830d34337}
+      \strng{fullhash}{afb3ca9963ad80bde8315a3830d34337}
+      \strng{bibnamehash}{afb3ca9963ad80bde8315a3830d34337}
+      \strng{authorbibnamehash}{afb3ca9963ad80bde8315a3830d34337}
+      \strng{authornamehash}{afb3ca9963ad80bde8315a3830d34337}
+      \strng{authorfullhash}{afb3ca9963ad80bde8315a3830d34337}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Worst-case to Average-case Reductions based on Gaussian Measures∗}
+      \verb{urlraw}
+      \verb https://cims.nyu.edu/~regev/papers/average.pdf
+      \endverb
+      \verb{url}
+      \verb https://cims.nyu.edu/~regev/papers/average.pdf
+      \endverb
+    \endentry
+    \entry{24}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9a0f2b40e3163796c628306096e94fd6}{%
+           family={Brakerski},
+           familyi={B\bibinitperiod},
+           given={Zvika},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a0f2b40e3163796c628306096e94fd6}
+      \strng{fullhash}{9a0f2b40e3163796c628306096e94fd6}
+      \strng{bibnamehash}{9a0f2b40e3163796c628306096e94fd6}
+      \strng{authorbibnamehash}{9a0f2b40e3163796c628306096e94fd6}
+      \strng{authornamehash}{9a0f2b40e3163796c628306096e94fd6}
+      \strng{authorfullhash}{9a0f2b40e3163796c628306096e94fd6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fully Homomorphic Encryption without Modulus Switching from Classical GapSVP}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2012/078.pdf
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2012/078.pdf
+      \endverb
+    \endentry
     \entry{10}{book}{}
       \name{author}{2}{}{%
         {{hash=816e2f157809620b6b2ed2aa074b32bf}{%
@@ -137,6 +189,37 @@
       \endverb
       \verb{url}
       \verb https://cacm.acm.org/magazines/2010/3/76272-computing-arbitrary-functions-of-encrypted-data/fulltext?mobile=false
+      \endverb
+    \endentry
+    \entry{18}{article}{}
+      \name{author}{2}{}{%
+        {{hash=66aba379c7d3adb8af5b662a65c4c140}{%
+           family={Goldreich},
+           familyi={G\bibinitperiod},
+           given={Oded},
+           giveni={O\bibinitperiod}}}%
+        {{hash=39e4a0690915f1d991133196a545b37b}{%
+           family={Goldwasser.},
+           familyi={G\bibinitperiod},
+           given={Shafi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{346560b75a2c373127db8b3ae5fbacdb}
+      \strng{fullhash}{346560b75a2c373127db8b3ae5fbacdb}
+      \strng{bibnamehash}{346560b75a2c373127db8b3ae5fbacdb}
+      \strng{authorbibnamehash}{346560b75a2c373127db8b3ae5fbacdb}
+      \strng{authornamehash}{346560b75a2c373127db8b3ae5fbacdb}
+      \strng{authorfullhash}{346560b75a2c373127db8b3ae5fbacdb}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the limits of non-approximability of lattice problems}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/276698.276704
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/276698.276704
       \endverb
     \endentry
     \entry{1}{book}{}
@@ -304,6 +387,32 @@
       \verb https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.112.4035&rep=rep1&type=pdf
       \endverb
     \endentry
+    \entry{16}{article}{}
+      \name{author}{1}{}{%
+        {{hash=494d3405b4e83ccd559f62cc6bf37f12}{%
+           family={Peikert∗},
+           familyi={P\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \strng{fullhash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \strng{bibnamehash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \strng{authorbibnamehash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \strng{authornamehash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \strng{authorfullhash}{494d3405b4e83ccd559f62cc6bf37f12}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Public-Key Cryptosystems from the Worst-Case Shortest Vector Problem}
+      \verb{urlraw}
+      \verb https://web.eecs.umich.edu/~cpeikert/pubs/svpcrypto.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.eecs.umich.edu/~cpeikert/pubs/svpcrypto.pdf
+      \endverb
+    \endentry
     \entry{4}{article}{}
       \name{author}{1}{}{%
         {{hash=1c38fa3906c4976a3d64f4395d3dc05a}{%
@@ -357,6 +466,37 @@
       \verb https://nitaj.users.lmno.cnrs.fr/cimpamaure/cours_securite-prouvee-crypto_Djiby_SOW-CIMPA.pdf
       \endverb
     \endentry
+    \entry{21}{article}{}
+      \name{author}{2}{}{%
+        {{hash=24767ed19084ffd1b6831dabc9d820c6}{%
+           family={Thore\bibnamedelima Graepel},
+           familyi={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Kristin\bibnamedelima Lauter},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=b1315d1cb133620e9488e665512a2272}{%
+           family={Naehrig},
+           familyi={N\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{186a19ace38fe8f22b10b2f024e424cd}
+      \strng{fullhash}{186a19ace38fe8f22b10b2f024e424cd}
+      \strng{bibnamehash}{186a19ace38fe8f22b10b2f024e424cd}
+      \strng{authorbibnamehash}{186a19ace38fe8f22b10b2f024e424cd}
+      \strng{authornamehash}{186a19ace38fe8f22b10b2f024e424cd}
+      \strng{authorfullhash}{186a19ace38fe8f22b10b2f024e424cd}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ML Confidential:Machine Learning on Encrypted Data}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2012/323.pdf
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2012/323.pdf
+      \endverb
+    \endentry
     \entry{5}{article}{}
       \name{author}{1}{}{%
         {{hash=4ffcd7ee039a2e18408c5968931cdd39}{%
@@ -408,6 +548,63 @@
       \endverb
       \verb{url}
       \verb https://eprint.iacr.org/2013/541.pdf
+      \endverb
+    \endentry
+    \entry{20}{article}{}
+      \name{author}{1}{}{%
+        {{hash=93693def805860c4184bef5c1778abd5}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yoshinori\bibnamedelimb Aono\bibnamedelimb Takuya\bibnamedelimb Hayashi\bibnamedelimb Le\bibnamedelimb Trieu\bibnamedelimb Phong\bibnamedelima Lihua},
+           giveni={Y\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{93693def805860c4184bef5c1778abd5}
+      \strng{fullhash}{93693def805860c4184bef5c1778abd5}
+      \strng{bibnamehash}{93693def805860c4184bef5c1778abd5}
+      \strng{authorbibnamehash}{93693def805860c4184bef5c1778abd5}
+      \strng{authornamehash}{93693def805860c4184bef5c1778abd5}
+      \strng{authorfullhash}{93693def805860c4184bef5c1778abd5}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fast and Secure Linear Regression and Biometric Authentication with Security Update}
+      \verb{urlraw}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.732.3597&rep=rep1&type=pdf
+      \endverb
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.732.3597&rep=rep1&type=pdf
+      \endverb
+    \endentry
+    \entry{23}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ab51ac087621eca551a39562f993fc75}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=bdc24ab29618fde3dcd30cb74607f48b}{%
+           family={Haven},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f51d7337a611e7219f27f2f392d6ee87}
+      \strng{fullhash}{f51d7337a611e7219f27f2f392d6ee87}
+      \strng{bibnamehash}{f51d7337a611e7219f27f2f392d6ee87}
+      \strng{authorbibnamehash}{f51d7337a611e7219f27f2f392d6ee87}
+      \strng{authornamehash}{f51d7337a611e7219f27f2f392d6ee87}
+      \strng{authorfullhash}{f51d7337a611e7219f27f2f392d6ee87}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Using Homomorphic Encryption for Large Scale Statistical Analysis}
+      \verb{urlraw}
+      \verb https://www.cs.virginia.edu/dwu4/papers/FHE-SI_Report.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.cs.virginia.edu/dwu4/papers/FHE-SI_Report.pdf
       \endverb
     \endentry
     \entry{14}{article}{}

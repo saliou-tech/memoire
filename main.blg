@@ -1,20 +1,27 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'main.blg'
-[232] biber-MSWIN64:340> INFO - === 
-[317] Biber.pm:415> INFO - Reading 'main.bcf'
-[527] Biber.pm:952> INFO - Found 15 citekeys in bib section 0
-[556] Biber.pm:4340> INFO - Processing section 0
-[588] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[712] bibtex.pm:1689> INFO - LaTeX decoding ...
-[746] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[796] Utils.pm:395> WARN - legacy year field 'March 2010,' in entry '3' is not an integer - this will probably not sort properly.
-[804] Utils.pm:395> WARN - legacy year field 'April 28, 2010' in entry '5' is not an integer - this will probably not sort properly.
-[854] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[854] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[893] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[893] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[893] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[893] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[927] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[936] bbl.pm:757> INFO - Output to main.bbl
-[937] Biber.pm:128> INFO - WARNINGS: 4
+[1] Config.pm:314> INFO - Logfile is 'main.blg'
+[217] biber-MSWIN64:340> INFO - === 
+[298] Biber.pm:415> INFO - Reading 'main.bcf'
+[506] Biber.pm:952> INFO - Found 24 citekeys in bib section 0
+[535] Biber.pm:4340> INFO - Processing section 0
+[560] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[689] bibtex.pm:1689> INFO - LaTeX decoding ...
+[736] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[788] Utils.pm:395> WARN - legacy year field 'March 2010,' in entry '3' is not an integer - this will probably not sort properly.
+[797] Utils.pm:395> WARN - legacy year field 'April 28, 2010' in entry '5' is not an integer - this will probably not sort properly.
+[858] Utils.pm:411> ERROR - Name "A. K. Lenstra 1, H. W. Lenstra, Jr. 2," has too many commas, skipping entry '17'
+[858] Utils.pm:395> WARN - Entry with key '17' in section '0' is cited and found but not created (likely due to sourcemap)
+[881] Utils.pm:411> ERROR - Name "Sebastian Tschiatschek, Peter Reinprecht, Manfred Mücke," has too many commas, skipping entry '22'
+[882] Utils.pm:395> WARN - Entry with key '22' in section '0' is cited and found but not created (likely due to sourcemap)
+[892] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[892] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[893] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[893] Utils.pm:395> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[949] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[950] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[950] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[950] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[997] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1017] bbl.pm:757> INFO - Output to main.bbl
+[1018] Biber.pm:128> INFO - WARNINGS: 8
+[1018] Biber.pm:132> INFO - ERRORS: 2

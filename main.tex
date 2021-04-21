@@ -1,4 +1,4 @@
-\documentclass[12pt]{report}
+\documentclass[12pt,a4paper]{report}
 \usepackage{lipsum}% for dummy text
 \usepackage{titlesec}
 \usepackage[utf8]{inputenc}
@@ -35,9 +35,11 @@
 \usepackage{ulem}
 \usepackage{color}
 \usepackage{cancel}
+
 \usepackage{dsfont}
 \usepackage{framed}
 \usepackage{amsmath}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
 \usepackage{amssymb}
 \usepackage{caption}
 \usepackage{wrapfig}
@@ -120,6 +122,14 @@ Dans ce chapitre, nous étudions la construction de plusieurs cryptosytémes hom
 Ensuite, nous présentons un schéma de chiffrement  entièrement homomorphe \cite{10} par  basé sur l'hypothèse d'apprentissage avec erreurs(learning with errors ). Enfin, bien que nous ne présentions pas un schéma de chiffeement  homomorphe strictement basé sur des problèmes de treillis(lattice problems), nous montrons une réduction du problème du plus court vecteur de treillis(shortest vector lattice problems) à l'apprentissage avec erreurs avant de conclure par une brève section sur le codage des nombres réels.
 \input{chapitre/chapitre4.tex}
 \\
+\part{application à la machine learning }
+\chapter{Application du chiffrement homomorphe aux algorithmes de machine learning }
+Dans ce chapitre, nous allons explorer les implémentations d'algorithmes de machine learning  populaires à l'aide de schémas de chiffrement homomorphes. La possibilité d'implémenter des algorithmes d'apprentissage automatique sur des schémas de chiffrement homomorphes est utile car elle nous permet d'exécuter de puissantes techniques d'analyse sur des données chiffrées. Par exemple, dans notre exemple précédent avec la scolarité du
+département de LACGAA de l’UCAD, nous ne voulons peut-être pas seulement calculer la moyenne des étudiants , mais aussi trouver des prédictions de bonnes notes pour les étudiants, ou classer les étudiants dans diverses catégories, tout en maintenant la confidentialité.Ains , le but du chiffrement homomorphe est de permettre le calcul ou le traitement sur des données chifrés sans révéler aucun détail sur les données.
+\\
+\\
+Bien qu'il existe des schémas de chiffrement totalement homomorphes, les schémas de chiffrement partiellement homomorphes sont parfois suffisants pour mettre en œuvre toutes les opérations nécessaires à certains algorithmes de machine learning . Dans d'autres cas, nous pouvons utiliser des schémas de chiffrement totalement homomorphes ou apporter de légères modifications à l'algorithme pour qu'il fonctionne avec des schémas partiellement homomorphes \cite{21}. Pour certaines sections, nous présentons également les preuves de sécurité correspondantes pour les algorithmes de machine learning respectifs.
+\input{chapitre/chapitre5.tex}
 \\
 \\
 \printbibliography
