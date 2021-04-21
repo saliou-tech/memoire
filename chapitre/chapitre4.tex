@@ -74,7 +74,7 @@ Pour le cryptosystème de Paillier, l'espace de message M = $\mathbb{Z}_{N}$ ,l'
  \caption{Algorithme de Paillier \cite{1} ,\cite{11}}
 \end{algorithm}
 Pour démontrer l'exactitude du cryptosystème de Paillier, nous examinons l'espace du texte chiffré : le groupe$\mathbb{Z^*}_{N^2}$ sous multiplication modulo $N^2$ et introduisons la notion de  $N^{ieme}$ résidus, qui sont importants pour le cryptosystème de Paillier.
-\subsubsection{definition}
+\subsubsection{}
 Un entier z $\in$ $\mathbb{Z^*}_{N^2}$  est  un $N^{ieme}$ résidus modulo $N^2$ ,s'il existe y $\in$ $\mathbb{Z^*}_{N^2}$ tel que
 \begin{equation}
   z &\equiv y^N \mod N^2 \\
@@ -127,20 +127,20 @@ Ainsi , on obtient
 Ainsi le schéma de déchiffrement est donc correcte\\
 Maintenant que nous avons vérifié l'exactitude des algorithmes de chiffrement et de déchiffrement, nous pouvons passer à l'examen de la sécurité du cryptosytéme de Paillier. Le problème difficile sur lequel le cryptosystème de Paillier est basé est le problème de résidu composite décisionnel, qui consiste à distinguer
 entre les éléments uniformes de $ \mathbb{Z^*}_{N^2}$ et les $ n^{ieme}$  residus de $ \mathbb{Z^*}_{N^2}$.Plus formellement, nous définissons ce que signifie le fait que le problème de résidu composite décisionnel soit difficile, en utilisant la définition de \cite{1}.
-\subsubsection{définition 1}
+\subsubsection{Définition 1}
 Le problème de la résiduosité composite décisionnelle est difficile si, pour tous les algorithmes probabilistes en temps polynomial D, il existe une fonction négligeable negl telle que pour r choisi aléatoirement parmi $ \mathbb{Z^*}_{N^2}$
 \begin{align*}
   |Pr[ D(N,r^{N} mod \ N^2)=1]-Pr[D(N,r)=1]| \leq negl(n)
 \end{align*}
 Dans la présentation originale de ce schéma par Paillier, il explore le problème de la $n^{ieme}$  classe de résidu et démontre que sa résolution nous donne un distinguateur pour le problème de résidu composite décisionnel ci-dessus. La  $n^{ieme}$  classe de résidu est définie comme suit :
-\subsubsection{définition 2}
+\subsubsection{Définition 2}
 Soit g $\in$ $ \mathbb{Z^*}_{N^2}$ ayant un ordre non nul multiple  de N. Nous appelons la $N^{ieme}$ classe de résidu de w par rapport à g, l'unique entier $ [[w]]_{g}$ $\in$ $Z_{n}$ pour lequel il existe y tel que
 \begin{align*}
   \epsilon_{g}([[w]]_{g},y) &=  ([[w]]_{g})^{g}.y^N =w
 \end{align*}
 Notez que ce problème est bien défini car $[[w]]_{g}$ est unique, ce qui vient du fait que $\epsilon_{g}$ est bijective (par le Lemme).
 \subsection{Réduction en RSA}
-\subsubsection{définition 3}
+\subsubsection{Définition 3}
 Le $N^{ieme}$ problème de classe de résidu de la base g, Classe[N, g] est le problème suivant. Étant donné
 w $\in$ $ \mathbb{Z^*}_{N^2}$ et une base g, calculer  $[[w]]_{g}$ .\\
 
@@ -220,8 +220,167 @@ Maintenant, en utilisant l'hypothèse que le problème de résidu composite déc
 \begin{align*}
   |Pr[D(N,r^{N} mod \ N^2)=1]- Pr[ D(N,r)=1]|\leq negl(n)
 \end{align*}
-ainsi , on a
+en remplaçant on a
 \begin{align*}
    |Pr[PubK^{eav}{_A,_{\epsilon}}(n) =1]-\frac{1}{2}|\leq negl(n)
 \end{align*}
+et donc
+\begin{align*}
+   |Pr[PubK^{eav}{_A,_{\epsilon}}(n) =1]|\leq  \frac{1}{2} + negl(n)
+\end{align*}
 Cela montre donc que le cryptosytéme de Paillier est sécurisé par EAV, et donc sécurisé par CPA.
+\section{Chiffrement entièrement homomorphe à partir de l'apprentissage avec erreurs (LWE)}
+Jusqu'à présent, les systèmes que nous avons examinés (c'est-à-dire RSA et le cryptosystème Paillier) étaient partiellement homomorphes. Les cryptosytémes partiellement homomorphes sont limités dans la mesure où ils ne supportent pas l'évaluation de toutes les fonctions f possibles sur les textes chiffrés.  Cette restriction limite la mesure dans laquelle ils peuvent être utilisés, comme dans les cas où nous ne savons pas quelles opérations spécifiques seront nécessaires. En effet, nous aimerions pouvoir exécuter des algorithmes de machine learning  de pointe sur  des  données chiffrées sans avoir à modifier le schéma de chiffrement chaque fois que nous devons prendre en charge une nouvelle opération, ou restreindre nos algorithmes à un certain ensemble d'opérations. \\
+D'autre part, un schéma de chiffrement totalement homomorphe nous permettrait d'évaluer des fonctions arbitraires sur les données. Le premier schéma de chiffrement totalement homomorphe a été proposé par Gentry \cite{3}, en utilisant une variante plus forte de l'hypothèse d'apprentissage avec erreurs pour les treillis idéaux et une hypothèse supplémentaire sur les sommes de sous-ensembles épars. Nous ne couvrons pas la construction de Gentry dans ce mémoire, mais notons qu'elle a servi de base à de nombreux schémas de chiffrement totalement homomorphes construits par la suite.\\
+
+Bien que le fait que nous puissions construire des schémas de chiffrement totalement homomorphes soit un énorme succès, cette flexibilité n'est pas sans inconvénients. En effet, comme indiqué dans \cite{12}, même si des solutions pour le chiffrement totalement homomorphe ont été constamment proposées et améliorées, les schémas de chiffrement totalement homomorphes semblent être loin d'être suffisamment efficaces pour être utilisés dans la pratique. Cependant, les schémas de chiffrement partiellement homomorphes ont tendance à être beaucoup plus rapides,  ce qui justifie leur utilisation dans de nombreuses applications de machine learning. Quoi qu'il en soit, nous poursuivons   dans ce qui suit une exploration du schéma de chiffrement totalement homomorphe de \cite{10}, basé sur les hypothèses LWE(learning with error).
+\subsection{LE problem LWE (learning with error )}
+ LWE est le  problème difficile  sur lequel repose le schéma de chiffrement entièrement homomorphe de \cite{10}. De manière informelle, cette hypothèse stipule que, étant donné $\mathbf{u}$ et$\langle \mathbf{u} , \mathbf{v} \rangle $ il est difficile de résoudre v si un petit terme de bruit est ajouté à $\langle \mathbf{u} , \mathbf{v} \rangle $. Nous donnons une définition formelle ci-dessous.
+ \subsubsection{Définition 1}
+ Étant donné un paramètre de sécurité $\lambda$, soit $ n = n(\lambda)$  une dimension entiére, $ q = q(\lambda) \geq 2$ un entier et $ \chi = \chi(\lambda)$  une distribution sur \mathbb{Z}. Le problème de l'apprentissage avec erreurs (LWE) est de distinguer les deux distributions suivantes :\\
+
+ 1)Dans la première distribution, on échantillonne $ (\mathbf{a_{i}}, b_{i})$  uniformément de $\mathbf{Z^{n+1}}_{q}$\\
+ 2)Dans la deuxième distribution, on tire d'abord $ s \leftarrow $   $\mathbf{Z^n}_{q}$ uniformément, puis on échantillonne $(\mathbf{a_{i}}, b_{i})$  $\in $ $\mathbf{Z^{n+1}}_{q}$ en échantillonnant $ \mathbf{a_{i}} \leftarrow \mathbf{Z^n}_{q}$ uniformément, $ e_{i} \leftarrow \chi$ , et en fixant $ b_{i}= \langle \mathbf{a_{i}} , s \rangle  + e_{i}$.\\
+ L'hypothèse d'apprentissage avec des erreurs (LWE ) est alors que le problème ci-dessus est irréalisable.
+\subsection{Généralités  sur le schéma :La méthode des vecteurs propres approximatifs}
+L'idée générale de ce schéma de chiffrement est de réaliser un chiffrement homomorphique basé sur LWE où les opérations d'addition et de multiplication correspondent directement à l'addition et à la multiplication de matrices. L'idée générale est qu'étant donné un message m et une clé secrète v avec au moins un  coefficient $v_{i}$ grand , le texte chiffré est alors  une matrice C telle que
+\begin{align*}
+  C.v = m.v + e
+\end{align*}
+avec e un vecteur d'erreur faible\\
+Par conséquent, la clé secrète v est un vecteur propre approximatif du texte chiffré C avec une valeur propre égale au message m. Pour déchiffrer, nous allons extraire la ième ligne de C (correspondant à la plus  grande entrée dans v, vi), et calculons
+\begin{align*}
+  x = \langle C_{i} , v_{i} \rangle =  m.v_{i} + e_{i} \implies m=   \floor*{\frac{x}{v_{i}}}
+\end{align*}
+Comme l'erreur $e_{i}$ est faible par rapport au coefficient $v{i}$, elle n'affectera pas l'arrondi de $\frac{x}{v_{i}}$ et ne faussera pas le dechiffrement de m. Par conséquent, le schéma de chiffrement sera correct.
+\subsection{Outils pour le chiffrement homomorphe}
+D'après la Généralité précédente, nous pouvons voir qu'il est important de garder le terme d'erreur borné. Par conséquent, nous définissons ce que signifie garder un texte chiffré fortement limité et nous introduisons certaines méthodes dans l'algorithme 3 qui nous permettront de maintenir cette propriété. Pour la notation, supposons que nous ayons un vecteur $\mathbf{a}$, alors soit  $ a_{i,j} $ le jème bit (où j = 0 est le bit le moins significatif) de l'élément i du vecteur.
+\subsubsection{Définition 2}
+Un texte chiffré C est B-fortement-limité si son message associé m, et les coefficients de C ont une norme d'au plus 1, tandis que les coefficients de son terme d'erreur e ont une norme  d'au plus B\\
+Les méthodes ci-dessous seront utilisées dans les algorithmes de chiffrement, de déchiffrement et d'évaluation homomorphes pour garder nos chifrés fortement limités. BitDecomp renvoie simplement les coefficients binaires pour chaque entrée d'un vecteur a. $ BitDecomp^{-1}$  ramène ces coefficients au vecteur a, mais notez que les entrées de  BitDecomp-1 ne doivent pas nécessairement être dans $ \{0, 1\}$ . Flatten utilise ces deux opérations pour accepter des coefficients binaires mal formés (c'est-à-dire qui ne sont pas dans $ \{0, 1\}$) et les représenter avec des coefficients binaires valides sans changer les entrées du vecteur sous-jacent. Enfin, PowersOf2 crée simplement des copies de chaque entrée multipliée par des puissances de 2$
+
+\begin{algorithm}[H]
+  \Procedure{BITDECOMP}{$(a)$}
+   \State \textbf{return} $(a_{1,0}, ..., a_{1,l-1}, ..., a_{k,0}, a_{k,l-1})$
+  \EndProcedure
+\Procedure{BITDECOMP^{-1}}{$(a_{1,0}, ..., a_{1,l-1}, ..., a_{k,0}, a_{k,l-1})$}
+
+ \State \textbf{return} $(\sum_{j}a_{1,j}, ...,\sum_{j}a_{k,j})$
+\EndProcedure
+
+\Procedure{FLATTEN}{$(a_{1,0}, ..., a_{1,l-1}, ..., a_{k,0}, a_{k,l-1})$}
+
+ \State \textbf{return} $BITDECOMP(BITDECOMP^{-1}(a_{1,0}, ..., a_{1,l-1}, ..., a_{k,0}, a_{k,l-1}))$
+\EndProcedure
+\Procedure{POWERSOF2}{$(2)$}
+
+ \State \textbf{return} $(b_{1},2b_{1}....,2^{l-1}b_{1},..........,b_{k},2b_{k}....,2^{l-1}b_{k})$
+\EndProcedure
+
+
+ \caption{Algorithme de BitDecomp, Flatten, Powersof2 }
+\end{algorithm}
+Quelques propriétés simples à noter à propos de ces méthodes\\
+1) $\langle BitDecomp(\mathbf{a}) , Powersof2(\mathbf{b}) \rangle  = \langle \mathbf{a} , \mathbf{b} \rangle  $\\
+2)Pour  a de dimension N ,Si $ a'=BitDecomp(a)$ ,$\langle \mathbf{a'} , Powersof2(\mathbf{b}) \rangle  = \langle BitDecomp^{-1}(\mathbf{a'}) , \mathbf{b} \rangle = \langle Flatten(\mathbf{a'}) , Powersof2(\mathbf{b}) \rangle  $ \\
+Comme  Flatten convertit les décompositions de bits en représentations binaires valides, c'est-à-dire avec des chiffres dans $\{0, 1\}$ , il est utile donc de  s'assurer que les coefficients de nos vecteurs/matrices sont petits. Rappelons que ceci est important pour garantir que les termes d'erreur restent limités tout au long de l'évaluation homomorphique.
+\subsection{Le schéma de chiffrement}
+Nous allons maintenant explorer les opérations de chiffrement, de déchiffrement et d'évaluation homomorphes du schéma de chiffrement totalement homomorphe de \cite{10}.\\
+Rappelons que l'espace du texte chiffré est constitué de matrices $\mathbf{N} \times \mathbf{N}$ sur $\mathbf{Z}_{q}$ pour un paramètre de dimension $\mathbf{N}$
+et un module q. De manière plus détaillée, supposons que $C_{1}$ et $ C_{2} $  sont des chiffrés  de $ m_{1}$  et  $m_{2}$ , respectivement
+\begin{align}
+  C_{1}.v &= m_{1}.v + e_{1}\\
+  C_{2}.v &= m_{2}.v + e_{2}
+\end{align}
+avec $e_{i}$  trés petit . Pour véerifier si ce schéma est homomorphe, nous pouvons alors voir que la somme et les produits des chifrés sont donnés par:
+\begin{align}
+  (C_{1} + C_{2}).v = (m_{1} + m_{2}).v + (e_{1} + e_{2})
+\end{align}
+\begin{align*}
+  (C_{1} \circ C_{2})·v &= C_{1}·(m_{2}·v + e_{2}) \\
+                        &=m_{2}·(m_{1}·v + e_{1})+C_{1}·e_{2} \\
+                        &=m_{1}·m_{2}·v + (m_{2}·e_{1} + C_{1}·e_{2})
+\end{align*}
+où les termes $(e_{1}+e_{2 })$ et  $(m_{2}·e_{1} + C_{1}·e_{2})$  demeurent  petits.Formellement, le schéma est décrit ci-dessous. Suivant la présentation de \cite{10}, nous décomposons l'algorithme GEN en trois parties :
+Setup, SecretKeyGen, et PublicKeyGen, comme ci-dessous dans l'Algorithme 4 :
+
+\begin{algorithm}[H]
+  \Procedure{SETUP}{$(1^{\lambda},1^L)$}
+  \State Choisir un module de $\kappa = \kappa( \lambda,L )$
+  \State Choisir la dimension latice (trellis) $ n = n(\lambda, L)$
+  \State Choisir la distribution d'erreur $ \chi = \chi(\lambda,L)$ de manière appropriée pour LWE
+  \State qui atteint au moins $2^{\lambda}$ sécurité contre les attaques connues
+  \State Choisir le paramètre $ m = m(\lambda, L) = \Theta(n{\log (q)})$
+   \State \textbf{return} $(\kappa, n ,\chi ,m)$
+  \EndProcedure
+\Procedure{SECRETKEYGEN}{$(\kappa, n ,\chi ,m)$}
+\State Echantillon $ t \leftarrow \mathbf{Z^n}_{q}$
+\State Définir $s_{k}=(1, {-}t_{1}, ..., {-}t_{n}) \in  \mathbf{Z^{n+1}}_{q}$
+ \State \textbf{return} $s_{k}$
+\EndProcedure
+
+\Procedure{PUBLICKEYGEN}{$(\kappa, n ,\chi ,m,s_{k})$}
+\State Echantillonner une matrice $ B \leftarrow \mathbf{Z^{m \times n}}_{q}$
+\State Echantillonner un vecteur $ e \leftarrow  \chi^m$
+\State Définir $ b = B.t + e $ où t peut être récupéré à partir de sk
+\State Calculer $ p_{k} = A $  qui est une (n + 1)  matrice de colonnes où la 1ére
+ colonne est b et les n colonnes suivantes sont B
+ \State \textbf{return} $p_{k}$(notez  que $ p_{k}.s_{k} = e$ où $p_{k}$ est une matrice et $s_{k} $ et e sont des vecteurs).
+\EndProcedure
+
+ \caption{Algorithme de Setup, SecretKeyGen, and PublicKeyGen }
+\end{algorithm}
+L'algorithme 5 ci-dessous présente les principales opérations du schéma de chiffrement. Notez qu'il existe deux
+algorithmes de déchiffrement : algorithme où  le message provient d'un petit espace d'échantillonnage (par exemple, $ \{0, 1\}$ ), et un qui fonctionne pour tout message dans $\mathbf{Z}_q$, bien que nous ne présentons que le cas où q est une puissance de 2.
+Ce dernier algorithme de déchiffrement MPDecryption provient de \cite{13} et un traitement du cas général q peut être trouvé là aussi . Nous précisons également la manière dont les opérations homomorphes seront effectuées dans l'algorithme 6 ci-dessous :
+\begin{algorithm}[H]
+  \Procedure{ENC}{$(\kappa, n ,\chi ,m,p_{k},\mu \in \mathbb{Z}_q)$}
+  \State Echantillonnez une matrice uniforme $ R \in \{0, 1\}^{N \times m$
+  \State Calculer $ C = Flatten(\mu .I_{N} + BitDecomp(R.A)) \in \mathbb{Z^{\mathbb{N} \times \mathbb{N}}}_q$
+   \State \textbf{return} $C$
+  \EndProcedure
+\Procedure{DEC}{$(\kappa, n ,\chi ,m,s_{k},C)$}
+\State Calculer $ v = Powersof2(s_{k})$
+\State Notez que les l premiers coefficients de v sont  $1,2,......,2^{l-1}$
+\State Choisir i tel que $v_{i}=2^i \in (\frac{q}{4},\frac{q}{2})$
+\State Calculer $x_{i}=\langle C_{i} , \mathbf{v} \rangle$ où $C_{i}$ est le ieme ligne de C
+\State Calculer $\mu= \floor*{\frac{x_{i}}{v_{i}}}$
+ \State \textbf{return} $\mu$
+\EndProcedure
+\Procedure{MPDecryption }{$(\kappa, n ,\chi ,m,s_{k},C)$}
+\State  voir \cite{13}
+\EndProcedure
+ \caption{Le schéma de chiffrement complet }
+\end{algorithm}
+
+\begin{algorithm}[H]
+  \Procedure{ADD}{$(C_{1},C_{2})$}
+  \State Calculer $ C_{1} +C_{2}$
+   \State \textbf{return} $Flatten(C_{1} +C_{2})$
+  \EndProcedure
+\Procedure{MULTCONST}{$(C,\alpha)$}
+\State Calculer $ M_{\alpha} = Flatten(\alpha .I_{N})$
+ \State \textbf{return} $Flatten(M_{\alpha}.C)$
+\EndProcedure
+\Procedure{MULT}{$(C_{1},C_{2})$}
+ \State \textbf{return} $Flatten(C_{1} \times C_{2})$
+\EndProcedure
+
+\Procedure{NAND}{$(C_{1},C_{2})$}
+ \State \textbf{return} $Flatten(I_{N}-C_{1}.C_{2})$
+\EndProcedure
+ \caption{Opérations homomorphes}
+\end{algorithm}
+Cette construction particulière utilise également les innovations de \cite{14} pour rendre facultative l'étape de bootstrapping commune à de nombreux schémas basés sur l'apprentissage avec les erreurs, ce qui
+le rendant plus efficace.
+\section{Réduction des schémas basés sur le treillis pour l'apprentissage avec des erreurs}
+Outre l'apprentissage avec des erreurs(LWE), les problèmes basés sur des treillis constituent une autre primitive cryptographique importante.
+Ils sont importants car les hypothèses de dureté les plus défavorables pour ces problèmes basés sur des treillis resistent même contre les ordinateurs quantiques. En outre, plusieurs schémas de chiffrement entièrement homomorphes ont été construits à l'aide de ces problèmes de treillis \cite{15}. Bien que nous n'explorions aucun schéma de chiffrement strictement basé sur des problèmes de treillis, nous introduirons brièvement la théorie de la cryptographie basée sur les treillis, puis nous présenterons une réduction du problème de treillis GapSVP souvent utilisé à l'apprentissage avec erreurs.
+\subsubsection{Définition 4}
+Un treillis (de rang complet) à n dimensions est un sous-groupe discret et additif de $\mathbf{R^n}$. De manière équivalente, si nous avons une base de n vecteurs linéairement indépendants $ \mathbf{B} = \{\mathbf{b}_1, ...., \mathbf{b}_n \}  \subset \mathbf{R^n}$
+alors le treillis $\wedge$ généré par la base $\mathbf{B}$ est l'ensemble
+\begin{align}
+  \wedge = \mathcal{L}(\mathbf{B})=\Bigg\{  \sum_{i}^{n}c_{i}b_{i}  |  \   c_{i} \in \mathbb{Z}   \Bigg\}
+\end{align}
+\subsubsection{Définition 5}
+Le treillis dual d'un treillis $\wedge$, noté $\wedge^* $ est $ \wedge^* = \Big\{{x \in \mathbf{R^n} |  \  \forall v \in \wedge,\langle \mathbf{x} , \mathbf{v} \rangle \in \mathbf{Z} \Big\}$ .

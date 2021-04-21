@@ -32,9 +32,6 @@
            given={Brent},
            giveni={B\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Cryptology ePrint Archive, Report 2013/340, 2013}%
-      }
       \strng{namehash}{f2d7681646eca537a8c0572b32e51e7b}
       \strng{fullhash}{f2d7681646eca537a8c0572b32e51e7b}
       \strng{bibnamehash}{f2d7681646eca537a8c0572b32e51e7b}
@@ -45,7 +42,7 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Homomorphic encryption from learning with errors: Conceptually-simpler, asymptotically-faster, attribute-based.}
+      \field{title}{Homomorphic encryption from learning with errors}
       \verb{urlraw}
       \verb https://www.iacr.org/archive/crypto2013/80420297/80420297.pdf
       \endverb
@@ -167,6 +164,37 @@
       \field{title}{Introduction to Modern Cryptography Principles and Protocols}
       \field{year}{2007}
     \endentry
+    \entry{12}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a095534d708d5b444d4677caee560de4}{%
+           family={Kristin\bibnamedelima Lauter},
+           familyi={K\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Michael\bibnamedelima Naehrig},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=bcd43d9385708d5fa3dbc36c49d8e579}{%
+           family={Vaikuntanathan.},
+           familyi={V\bibinitperiod},
+           given={Vinod},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \strng{fullhash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \strng{bibnamehash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \strng{authorbibnamehash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \strng{authornamehash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \strng{authorfullhash}{4c55cfc0cae363c44cbc2e751ba99bc6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Can homomorphic encryptionbe practical?}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2011/405.pdf
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2011/405.pdf
+      \endverb
+    \endentry
     \entry{7}{article}{}
       \name{author}{1}{}{%
         {{hash=87536bbeb99c754f64c4b98c86ef2637}{%
@@ -191,6 +219,37 @@
       \endverb
       \verb{url}
       \verb https://epubs.siam.org/doi/pdf/10.1137/S0097539702403773
+      \endverb
+    \endentry
+    \entry{13}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ecac199b7530e85b705d775ddb57543b}{%
+           family={Micciancio1},
+           familyi={M\bibinitperiod},
+           given={Daniele},
+           giveni={D\bibinitperiod}}}%
+        {{hash=910b4f34f67502ebf51d7391c9ce096b}{%
+           family={Peikert},
+           familyi={P\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3947275d70eed9179586d8dad5a9c83f}
+      \strng{fullhash}{3947275d70eed9179586d8dad5a9c83f}
+      \strng{bibnamehash}{3947275d70eed9179586d8dad5a9c83f}
+      \strng{authorbibnamehash}{3947275d70eed9179586d8dad5a9c83f}
+      \strng{authornamehash}{3947275d70eed9179586d8dad5a9c83f}
+      \strng{authorfullhash}{3947275d70eed9179586d8dad5a9c83f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Trapdoors for Lattices:Simpler, Tighter, Faster, Smaller}
+      \verb{urlraw}
+      \verb https://www.iacr.org/archive/eurocrypt2012/72370695/72370695.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.iacr.org/archive/eurocrypt2012/72370695/72370695.pdf
       \endverb
     \endentry
     \entry{9}{book}{}
@@ -323,6 +382,58 @@
       \endverb
       \verb{url}
       \verb https://people.seas.harvard.edu/~salil/research/delegation-eprint-apr10.pdf
+      \endverb
+    \endentry
+    \entry{15}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8f33ecb3dba9d824e46b823a66fcae98}{%
+           family={Vaikuntanathan†},
+           familyi={V\bibinitperiod},
+           given={Zvika\bibnamedelimb Brakerski∗\bibnamedelima Vinod},
+           giveni={Z\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \strng{fullhash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \strng{bibnamehash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \strng{authorbibnamehash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \strng{authornamehash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \strng{authorfullhash}{8f33ecb3dba9d824e46b823a66fcae98}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Lattice-Based FHE as Secure as PKE}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2013/541.pdf
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2013/541.pdf
+      \endverb
+    \endentry
+    \entry{14}{article}{}
+      \name{author}{1}{}{%
+        {{hash=06e2aea38d93148c9764942ba10a7837}{%
+           family={Zvika\bibnamedelima Brakerski},
+           familyi={Z\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Craig\bibnamedelima Gentry∗},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{06e2aea38d93148c9764942ba10a7837}
+      \strng{fullhash}{06e2aea38d93148c9764942ba10a7837}
+      \strng{bibnamehash}{06e2aea38d93148c9764942ba10a7837}
+      \strng{authorbibnamehash}{06e2aea38d93148c9764942ba10a7837}
+      \strng{authornamehash}{06e2aea38d93148c9764942ba10a7837}
+      \strng{authorfullhash}{06e2aea38d93148c9764942ba10a7837}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fully Homomorphic Encryption without Bootstrapping}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2011/277.pdf
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2011/277.pdf
       \endverb
     \endentry
   \enddatalist
